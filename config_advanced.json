@@ -1,0 +1,159 @@
+{
+  "project_metadata": {
+    "name": "GetOffMyTrain",
+    "version": "1.0.0",
+    "authors": ["Valerio Mesiti, Gabriele Moretti, Mattia Giordano"],
+    "university": ["La Sapienza"],
+    "date": "2025-12-23"
+  },
+
+  "cv_pipeline": {
+    "corner_detection": {
+      "model": "corners.pt",
+      "confidence_threshold": 0.25,
+      "expected_corners": ["tl", "tr", "br", "bl"],
+      "aliases": {
+        "tl": ["tl", "top_left", "corner_tl"],
+        "tr": ["tr", "top_right", "corner_tr"],
+        "bl": ["bl", "bottom_left", "corner_bl"],
+        "br": ["br", "bottom_right", "corner_br"]
+      }
+    },
+
+    "train_detection": {
+      "model": "trains.pt",
+      "confidence_threshold": 0.25,
+      "expected_classes": ["train_red", "train_blue", "train_yellow", "train_green", "train_black"]
+    },
+
+    "homography": {
+      "method": "RANSAC",
+      "ransac_threshold": 5.0,
+      "description": "Computes perspective transformation from image to template"
+    },
+
+    "route_assignment": {
+      "distance_metric": "point_to_polyline",
+      "assignment_threshold_px": 8,
+      "tuning_note": "Increase if trains are not assigned, decrease for stricter matching"
+    }
+  },
+
+  "data_science_config": {
+    "scoring_system": {
+      "route_length_points": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 7,
+        "5": 10,
+        "6": 15,
+        "7": 18,
+        "8": 21,
+        "9": 24,
+        "10": 27
+      },
+      "description": "Points awarded based on route length (Ticket to Ride standard)"
+    }
+  },
+
+  "player_configuration": {
+    "colors": {
+      "red": {
+        "bgr_color": [0, 0, 255],
+        "player_name": "Player 1",
+        "card_count": 5
+      },
+      "blue": {
+        "bgr_color": [255, 0, 0],
+        "player_name": "Player 2",
+        "card_count": 5
+      },
+      "yellow": {
+        "bgr_color": [0, 255, 255],
+        "player_name": "Player 3",
+        "card_count": 5
+      },
+      "green": {
+        "bgr_color": [0, 255, 0],
+        "player_name": "Player 4",
+        "card_count": 5
+      },
+      "black": {
+        "bgr_color": [0, 0, 0],
+        "player_name": "Player 5",
+        "card_count": 5
+      }
+    },
+    "max_players": 5,
+    "min_players": 2,
+    "starting_trains": 45
+  },
+
+  "file_paths": {
+    "models": {
+      "corners": "models/corners.pt",
+      "trains": "models/trains.pt"
+    },
+    "input": {
+      "image": "USA/pictures/10_C.jpg",
+      "template": "USA/USA_map.jpg",
+      "routes": "USA/tracks.json"
+    },
+    "output": {
+      "game_state": "USA/game_state_scores.json",
+      "ar_data": "USA/game_state_scores_ar.json",
+      "visualization": "USA/aligned_overlay.png",
+      "aligned_board": "USA/aligned_board.png"
+    }
+  },
+
+  "quality_metrics": {
+    "detections": {
+      "minimum_corner_confidence": 0.7,
+      "minimum_train_confidence": 0.6,
+      "maximum_corner_missing": 0,
+      "maximum_unassigned_trains": 0.1
+    },
+    "homography": {
+      "min_points_for_estimation": 4,
+      "ransac_iterations": 1000
+    },
+    "scoring": {
+      "validate_route_lengths": true,
+      "handle_overlapping_routes": "assign_to_closest"
+    }
+  },
+
+  "export_formats": {
+    "json": {
+      "enabled": true,
+      "indent": 2,
+      "ensure_ascii": false
+    },
+    "csv": {
+      "enabled": true,
+      "format": "player_scores.csv",
+      "fields": ["player_name", "route_score", "routes_completed"]
+    },
+    "html_report": {
+      "enabled": false,
+      "template": "report_template.html"
+    }
+  },
+
+  "logging": {
+    "level": "INFO",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    "file": "ticket_to_ride.log",
+    "console_output": true
+  },
+
+  "advanced_options": {
+    "debug_mode": false,
+    "save_intermediate_images": true,
+    "visualization_enabled": true,
+    "benchmark_timing": true,
+    "memory_optimization": true
+  }
+}

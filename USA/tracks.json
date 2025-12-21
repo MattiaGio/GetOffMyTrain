@@ -1,0 +1,181 @@
+[
+  { "id": "vancouver-seattle-1", "from": "Vancouver", "to": "Seattle", "length": 1, "color": "gray", "polyline": [[90,105], [90,140]] },
+  { "id": "vancouver-seattle-2", "from": "Vancouver", "to": "Seattle", "length": 1, "color": "gray", "polyline": [[100,105], [100,140]] },
+
+  { "id": "vancouver-calgary", "from": "Vancouver", "to": "Calgary", "length": 3, "color": "gray", "polyline": [[110,90], [220,75]] },
+
+  { "id": "seattle-portland-1", "from": "Seattle", "to": "Portland", "length": 1, "color": "gray", "polyline": [[80,155], [70,190]] },
+  { "id": "seattle-portland-2", "from": "Seattle", "to": "Portland", "length": 1, "color": "gray", "polyline": [[95,160], [80,190]] },
+
+  { "id": "seattle-calgary", "from": "Seattle", "to": "Calgary", "length": 4, "color": "gray", "polyline": [[105,150], [180,140], [230,90]] },
+
+  { "id": "portland-sanfrancisco-1", "from": "Portland", "to": "San Francisco", "length": 5, "color": "green", "polyline": [[60,215], [40,305], [50,400]] },
+  { "id": "portland-sanfrancisco-2", "from": "Portland", "to": "San Francisco", "length": 5, "color": "pink", "polyline": [[75,215], [50,300], [65,400]] },
+
+  { "id": "sanfrancisco-losangeles-1", "from": "San Francisco", "to": "Los Angeles", "length": 3, "color": "yellow", "polyline": [[60,425], [85,475], [120,520]] },
+  { "id": "sanfrancisco-losangeles-2", "from": "San Francisco", "to": "Los Angeles", "length": 3, "color": "pink", "polyline": [[70,420], [95,465], [130,510]] },
+
+  { "id": "losangeles-lasvegas", "from": "Los Angeles", "to": "Las Vegas", "length": 2, "color": "gray", "polyline": [[140,510], [160,465], [195,465]] },
+
+  { "id": "losangeles-phoenix", "from": "Los Angeles", "to": "Phoenix", "length": 3, "color": "gray", "polyline": [[145,520], [200,510], [255,520]] },
+
+  { "id": "losangeles-elpaso", "from": "Los Angeles", "to": "El Paso", "length": 6, "color": "black", "polyline": [[150,530], [250,575], [360,570]] },
+
+  { "id": "phoenix-elpaso", "from": "Phoenix", "to": "El Paso", "length": 3, "color": "gray", "polyline": [[270,535], [375,565]] },
+  
+  { "id": "phoenix-santafe", "from": "Phoenix", "to": "Santa Fe", "length": 3, "color": "gray", "polyline": [[280,520], [380,475]] },
+
+  { "id": "elpaso-houston", "from": "El Paso", "to": "Houston", "length": 6, "color": "green", "polyline": [[395,575], [495,610], [600,590]] },
+
+  { "id": "elpaso-dallas", "from": "El Paso", "to": "Dallas", "length": 4, "color": "red", "polyline": [[415,570], [560,545]] },
+
+  { "id": "elpaso-oklahomacity", "from": "El Paso", "to": "Oklahoma City", "length": 5, "color": "yellow", "polyline": [[400,565], [480,520], [545,455]] },
+
+  { "id": "houston-dallas-1", "from": "Houston", "to": "Dallas", "length": 1, "color": "grey", "polyline": [[595,575], [575,550]] },
+  { "id": "houston-dallas-2", "from": "Houston", "to": "Dallas", "length": 1, "color": "grey", "polyline": [[605,565], [585,540]] },
+
+  { "id": "littlerock-dallas", "from": "Little Rock", "to": "Dallas", "length": 2, "color": "grey", "polyline": [[630,460], [585,520]] },
+
+  { "id": "littlerock-neworleans", "from": "Little Rock", "to": "New Orleans", "length": 3, "color": "green", "polyline": [[645,460], [695,560]] },
+
+  { "id": "lasvegas-saltlakecity", "from": "Las Vegas", "to": "Salt Lake City", "length": 3, "color": "orange", "polyline": [[220,460], [250,410], [265,360]] },
+
+  { "id": "sanfrancisco-saltlakecity-1", "from": "San Francisco", "to": "Salt Lake City", "length": 5, "color": "orange", "polyline": [[75,400], [245,340]] },
+  { "id": "sanfrancisco-saltlakecity-2", "from": "San Francisco", "to": "Salt Lake City", "length": 5, "color": "white", "polyline": [[75,415], [250,355]] },
+
+  { "id": "portland-saltlakecity", "from": "Portland", "to": "Salt Lake City", "length": 6, "color": "blue", "polyline": [[85,205], [190,250], [260,335]] },
+
+  { "id": "saltlakecity-denver-1", "from": "Salt Lake City", "to": "Denver", "length": 3, "color": "red", "polyline": [[275,335], [380,355]] },
+  { "id": "saltlakecity-denver-2", "from": "Salt Lake City", "to": "Denver", "length": 3, "color": "yellow", "polyline": [[275,355], [380,375]] },
+
+  { "id": "denver-phoenix", "from": "Denver", "to": "Phoenix", "length": 5, "color": "white", "polyline": [[385,385], [335,410], [310,435], [270,520]] },
+
+  { "id": "denver-santafe", "from": "Denver", "to": "Santa Fe", "length": 2, "color": "gray", "polyline": [[395,390], [390,460]] },
+
+  { "id": "santafe-elpaso", "from": "Santa Fe", "to": "El Paso", "length": 2, "color": "gray", "polyline": [[390,485], [385,555]] },
+
+  { "id": "denver-omaha", "from": "Denver", "to": "Omaha", "length": 4, "color": "pink", "polyline": [[410,370], [465,330], [540,310]] },
+  
+  { "id": "denver-helena", "from": "Denver", "to": "Helena", "length": 4, "color": "green", "polyline": [[400,360], [345,230]] },
+
+  { "id": "denver-kansascity-1", "from": "Denver", "to": "Kansas City", "length": 4, "color": "black", "polyline": [[415,370], [490,380], [560,355]] },
+  { "id": "denver-kansascity-2", "from": "Denver", "to": "Kansas City", "length": 4, "color": "orange", "polyline": [[415,390], [490,390], [565,370]] },
+
+  { "id": "denver-oklahomacity", "from": "Denver", "to": "Oklahoma City", "length": 4, "color": "red", "polyline": [[405,400], [465,440], [535,450]] },
+
+  { "id": "oklahomacity-dallas-1", "from": "Oklahoma City", "to": "Dallas", "length": 2, "color": "gray", "polyline": [[555,460], [565,530]] },
+  { "id": "oklahomacity-dallas-2", "from": "Oklahoma City", "to": "Dallas", "length": 2, "color": "gray", "polyline": [[565,460], [575,530]] },
+
+  { "id": "oklahomacity-littlerock", "from": "Oklahoma City", "to": "Little Rock", "length": 2, "color": "gray", "polyline": [[565,450], [635,450]] },
+
+  { "id": "oklahomacity-kansascity-1", "from": "Oklahoma City", "to": "Kansas City", "length": 2, "color": "gray", "polyline": [[550,440], [570,370]] },
+  { "id": "oklahomacity-kansascity-2", "from": "Oklahoma City", "to": "Kansas City", "length": 2, "color": "gray", "polyline": [[560,440], [580,370]] },
+  
+  { "id": "oklahomacity-santafe", "from": "Oklahoma City", "to": "Santa Fe", "length": 3, "color": "blue", "polyline": [[510,460], [400,470]] },
+  
+  { "id": "nashville-littlerock", "from": "Nashville", "to": "Little Rock", "length": 3, "color": "white", "polyline": [[745,405], [705,440], [650,450]] },
+  
+  { "id": "nashville-raleigh", "from": "Nashville", "to": "Raleigh", "length": 3, "color": "black", "polyline": [[760,390], [810,365], [865,365]] },
+  
+  { "id": "nashville-pittsburg", "from": "Nashville", "to": "Pittsburgh", "length": 4, "color": "yellow", "polyline": [[740,395], [780,330], [835,280]] },
+
+  { "id": "kansascity-stlouis-1", "from": "Kansas City", "to": "Saint Louis", "length": 2, "color": "blue", "polyline": [[580,350], [650,350]] },
+  { "id": "kansascity-stlouis-2", "from": "Kansas City", "to": "Saint Louis", "length": 2, "color": "pink", "polyline": [[580,365], [650,365]] },
+
+  { "id": "kansascity-omaha-1", "from": "Kansas City", "to": "Omaha", "length": 1, "color": "gray", "polyline": [[565,350], [550,315]] },
+  { "id": "kansascity-omaha-2", "from": "Kansas City", "to": "Omaha", "length": 1, "color": "gray", "polyline": [[575,350], [565,310]] },
+
+  { "id": "stlouis-chicago-1", "from": "Saint Louis", "to": "Chicago", "length": 2, "color": "green", "polyline": [[655,345], [690,285]] },
+  { "id": "stlouis-chicago-2", "from": "Saint Louis", "to": "Chicago", "length": 2, "color": "white", "polyline": [[665,355], [705,290]] },
+
+  { "id": "stlouis-littlerock", "from": "Saint Louis", "to": "Little Rock", "length": 2, "color": "gray", "polyline": [[660,370], [645,445]] },
+
+  { "id": "stlouis-pittsburgh", "from": "Saint Louis", "to": "Pittsburgh", "length": 5, "color": "green", "polyline": [[670,365], [830,270]] },
+
+  { "id": "stlouis-nashville", "from": "Saint Louis", "to": "Nashville", "length": 2, "color": "gray", "polyline": [[670,380], [740,400]] },
+
+  { "id": "neworleans-houston", "from": "New Orleans", "to": "Houston", "length": 2, "color": "gray", "polyline": [[695,570], [625,580]] },
+
+  { "id": "neworleans-atlanta-1", "from": "New Orleans", "to": "Atlanta", "length": 4, "color": "yellow", "polyline": [[710,555], [740,490], [795,440]] },
+  { "id": "neworleans-atlanta-2", "from": "New Orleans", "to": "Atlanta", "length": 4, "color": "orange", "polyline": [[725,570], [750,500], [805,450]] },
+
+  { "id": "neworleans-miami", "from": "New Orleans", "to": "Miami", "length": 6, "color": "red", "polyline": [[730,575], [835,545], [920,615]] },
+
+  { "id": "atlanta-charleston", "from": "Atlanta", "to": "Charleston", "length": 2, "color": "gray", "polyline": [[820,445], [895,450]] },
+
+  { "id": "atlanta-nashville", "from": "Atlanta", "to": "Nashville", "length": 1, "color": "gray", "polyline": [[795,430], [765,405]] },
+
+  { "id": "atlanta-raleigh-1", "from": "Atlanta", "to": "Raleigh", "length": 2, "color": "gray", "polyline": [[810,425], [865,380]] },
+  { "id": "atlanta-raleigh-2", "from": "Atlanta", "to": "Raleigh", "length": 2, "color": "gray", "polyline": [[820,435], [875,385]] },
+  
+  { "id": "atlanta-miami", "from": "Atlanta", "to": "Miami", "length": 5, "color": "blue", "polyline": [[810,455], [925,600]] },
+
+  { "id": "raleigh-charleston", "from": "Raleigh", "to": "Charleston", "length": 2, "color": "gray", "polyline": [[885,380], [920,400], [905,435]] },
+
+  { "id": "raleigh-washington-1", "from": "Raleigh", "to": "Washington", "length": 2, "color": "gray", "polyline": [[880,365], [925,310]] },
+  { "id": "raleigh-washington-2", "from": "Raleigh", "to": "Washington", "length": 2, "color": "gray", "polyline": [[890,370], [935,320]] },
+  
+  { "id": "miami-charleston", "from": "Miami", "to": "Charleston", "length": 4, "color": "pink", "polyline": [[940,595], [910,525], [900,455]] },
+
+  { "id": "washington-newyork-1", "from": "Washington", "to": "New York", "length": 2, "color": "black", "polyline": [[940,295], [940,220]] },
+  { "id": "washington-newyork-2", "from": "Washington", "to": "New York", "length": 2, "color": "orange", "polyline": [[925,295], [925,220]] },
+
+  { "id": "newyork-boston-1", "from": "New York", "to": "Boston", "length": 2, "color": "yellow", "polyline": [[930,200], [970,140]] },
+  { "id": "newyork-boston-2", "from": "New York", "to": "Boston", "length": 2, "color": "red", "polyline": [[940,210], [980,145]] },
+
+  { "id": "newyork-pittsburgh-1", "from": "New York", "to": "Pittsburgh", "length": 2, "color": "white", "polyline": [[905,205], [845,245]] },
+  { "id": "newyork-pittsburgh-2", "from": "New York", "to": "Pittsburgh", "length": 2, "color": "green", "polyline": [[915,220], [855,255]] },
+  
+  { "id": "newyork-montreal", "from": "New York", "to": "Montreal", "length": 3, "color": "blue", "polyline": [[915,195], [900,85]] },
+  
+  { "id": "montreal-boston-1", "from": "Montreal", "to": "Boston", "length": 2, "color": "gray", "polyline": [[920,70], [975,115]] },
+  { "id": "montreal-boston-2", "from": "Montreal", "to": "Boston", "length": 2, "color": "gray", "polyline": [[910,80], [965,130]] },
+
+  { "id": "pittsburgh-toronto", "from": "Pittsburgh", "to": "Toronto", "length": 2, "color": "gray", "polyline": [[835,245], [830,170]] },
+
+  { "id": "pittsburgh-chicago-1", "from": "Pittsburgh", "to": "Chicago", "length": 3, "color": "orange", "polyline": [[820,250], [760,250], [710,260]] },
+  { "id": "pittsburgh-chicago-2", "from": "Pittsburgh", "to": "Chicago", "length": 3, "color": "black", "polyline": [[825,260], [765,260], [715,275]] },
+
+  { "id": "pittsburgh-stlouis", "from": "Pittsburgh", "to": "Saint Louis", "length": 5, "color": "green", "polyline": [[830,270], [670,365]] },
+  
+  { "id": "pittsburgh-raleigh", "from": "Pittsburgh", "to": "Raleigh", "length": 2, "color": "gray", "polyline": [[845,275], [865,355]] },
+  
+  { "id": "pittsburgh-washington", "from": "Pittsburgh", "to": "Washington", "length": 2, "color": "gray", "polyline": [[850,265], [920,300]] },
+
+  { "id": "toronto-saultstmarie", "from": "Toronto", "to": "Sault St. Marie", "length": 2, "color": "gray", "polyline": [[800,160], [725,145]] },
+  
+  { "id": "toronto-duluth", "from": "Toronto", "to": "Duluth", "length": 6, "color": "pink", "polyline": [[805,170], [590,210]] },
+  
+  { "id": "toronto-chicago", "from": "Toronto", "to": "Chicago", "length": 4, "color": "white", "polyline": [[815,175], [750,210], [695,255]] },
+  
+  { "id": "toronto-montreal", "from": "Toronto", "to": "Montreal", "length": 3, "color": "gray", "polyline": [[815,150], [850,105], [895,75]] },
+
+  { "id": "saultstmarie-winnipeg", "from": "Sault St. Marie", "to": "Winnipeg", "length": 6, "color": "gray", "polyline": [[700,135], [485,90]] },
+  
+  { "id": "saultstmarie-montreal", "from": "Sault St. Marie", "to": "Montreal", "length": 5, "color": "black", "polyline": [[715,130], [795,85], [885,65]] },
+  
+  { "id": "saultstmarie-duluth", "from": "Sault St. Marie", "to": "Duluth", "length": 3, "color": "gray", "polyline": [[695,150], [595,195]] },
+
+  { "id": "winnipeg-duluth", "from": "Winnipeg", "to": "Duluth", "length": 4, "color": "black", "polyline": [[475,100], [575,200]] },
+
+  { "id": "winnipeg-helena", "from": "Winnipeg", "to": "Helena", "length": 4, "color": "blue", "polyline": [[455,100], [350,200]] },
+  
+  { "id": "winnipeg-calgary", "from": "Winnipeg", "to": "Calgary", "length": 6, "color": "white", "polyline": [[455,80], [410,60], [350,50], [245,75]] },
+
+  { "id": "duluth-helena", "from": "Duluth", "to": "Helena", "length": 6, "color": "orange", "polyline": [[570,215], [350,215]] },
+
+  { "id": "duluth-omaha-1", "from": "Duluth", "to": "Omaha", "length": 2, "color": "gray", "polyline": [[570,225], [545,290]] },
+  { "id": "duluth-omaha-2", "from": "Duluth", "to": "Omaha", "length": 2, "color": "gray", "polyline": [[585,230], [560,295]] },
+
+  { "id": "duluth-chicago", "from": "Duluth", "to": "Chicago", "length": 3, "color": "red", "polyline": [[590,220], [700,265]] },
+
+  { "id": "helena-seattle", "from": "Helena", "to": "Seattle", "length": 6, "color": "yellow", "polyline": [[325,220], [105,165]] },
+
+  { "id": "helena-saltlakecity", "from": "Helena", "to": "Salt Lake City", "length": 3, "color": "pink", "polyline": [[330,230], [275,325]] },
+
+  { "id": "helena-calgary", "from": "Helena", "to": "Calgary", "length": 4, "color": "gray", "polyline": [[335,205], [240,90]] },
+
+  { "id": "helena-omaha", "from": "Helena", "to": "Omaha", "length": 5, "color": "red", "polyline": [[360,230], [525,300]] },
+
+  { "id": "omaha-chicago", "from": "Omaha", "to": "Chicago", "length": 4, "color": "blue", "polyline": [[560,305], [620,265], [695,270]] }
+]

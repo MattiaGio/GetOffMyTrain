@@ -1,0 +1,12 @@
+train: ../train/images
+val: ../train/images
+
+nc: 4
+names: ['corner_bl', 'corner_br', 'corner_tl', 'corner_tr']
+
+roboflow:
+  workspace: computer-vision-9dya7
+  project: ticket_to_ride_corners-3g74v
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/computer-vision-9dya7/ticket_to_ride_corners-3g74v/dataset/1
