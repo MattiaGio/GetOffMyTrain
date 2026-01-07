@@ -187,48 +187,99 @@ class Visualizer:
                 cv2.polylines(viz, [poly], isClosed=False, color=(0, 255, 255), thickness=3)
         return viz
 
+
 # ==================== Pipeline Functions ====================
 
-def process_frame(frame: np.ndarray, template: np.ndarray, routes: List[Dict]):
+# Modifica questa funzione
+def process_frame(frame: np.ndarray, template: np.ndarray, routes: List[Dict], last_H: np.ndarray = None):
+    # 1. Tenta di rilevare gli angoli
     corner_dets = ImageProcessor.detect_with_yolo(Config.CORNERS_MODEL, frame)
-    corners = ImageProcessor.extract_corners(corner_dets)
-    H = ImageProcessor.compute_homography(corners, template.shape)
+    
+    H = None
+    try:
+        corners = ImageProcessor.extract_corners(corner_dets)
+        H = ImageProcessor.compute_homography(corners, template.shape)
+    except RuntimeError:
+        # Rilevamento fallito (meno di 4 angoli). 
+        # Se abbiamo una vecchia omografia valida, usiamo quella!
+        if last_H is not None:
+            H = last_H
+        else:
+            # Se è il primo frame e fallisce, non possiamo fare nulla
+            raise 
+
+    # 2. Usa H (nuova o vecchia) per raddrizzare l'immagine
     aligned = ImageProcessor.warp_image(frame, H, template.shape)
+    
+    # 3. Rilevamento treni e logica di gioco (invariato)
     train_dets = ImageProcessor.detect_with_yolo(Config.TRAINS_MODEL, aligned)
     trains_mapped = [{"class": d["class"], "center_map": d["center"], "bbox": d["bbox"], "conf": d["conf"]} for d in train_dets]
     assignments = RouteManager.assign_trains_to_routes(trains_mapped, routes)
     scores = ScoringEngine.generate_player_scores(assignments)
+    
+    # 4. Disegno overlay (invariato)
     overlay = Visualizer.draw_overlay(aligned, routes, assignments)
-    return overlay, scores
+    
+    # Restituiamo anche H per poterla riutilizzare nel prossimo frame
+    return overlay, scores, H
 
 # ==================== Real-Time Demo ====================
 
 def main():
     print("🚂 GetOffMyTrain - Real-Time Demo")
     cap = cv2.VideoCapture(0)
+    # Imposta risoluzione (opzionale, aiuta la stabilità se più alta)
+    cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
+    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
+
     template = ImageProcessor.load_image(Config.TEMPLATE_PATH)
     routes = RouteManager.load_routes(Config.ROUTES_JSON)
+
+    # Variabile per ricordare l'ultima posizione valida della mappa
+    last_valid_H = None
+    # Contatore per "dimenticare" la vecchia posizione se passa troppo tempo
+    missed_frames = 0
+    MAX_MISSED_FRAMES = 10  # Dopo 10 frame persi, resetta (evita overlay bloccati se sposti il telefono altrove)
 
     while True:
         ret, frame = cap.read()
         if not ret:
             break
+            
         try:
-            overlay, scores = process_frame(frame, template, routes)
+            # Passiamo last_valid_H e riceviamo la nuova H
+            overlay, scores, current_H = process_frame(frame, template, routes, last_valid_H)
+            
+            # Se siamo qui, abbiamo avuto successo (o usato il backup)
+            #last_valid_H = current_H
+            # Invece di last_valid_H = current_H
+            if last_valid_H is None:
+                last_valid_H = current_H
+            else:
+                # 30% nuova posizione, 70% vecchia posizione (riduce il tremolio)
+                last_valid_H = 0.7 * last_valid_H + 0.3 * current_H
+                
+            missed_frames = 0 # Reset contatore errori
+
             cv2.imshow("GetOffMyTrain - Live Overlay", overlay)
-            # Optional: print scores in console
-            for color, data in scores.items():
-                print(f"{data['player_name']}: {data['route_score']} pts ({data['routes_completed']} routes)", end=" | ")
-            print("\r", end="")
+            
+            # Print scores (semplificato per leggibilità)
+            # ... (tuo codice di print) ...
+            
         except Exception as e:
-            print("Frame skipped:", e)
-            cv2.imshow("GetOffMyTrain - Live Overlay", frame)
+            # Questo scatta solo se FALLISCE anche il backup (es. primo frame o troppi errori)
+            missed_frames += 1
+            if missed_frames > MAX_MISSED_FRAMES:
+                last_valid_H = None # Resetta se perdiamo la mappa per troppo tempo
+            
+            # Mostra il frame originale così l'utente vede cosa inquadra
+            cv2.imshow("GetOffMyTrain - Live Overlay", frame) 
 
         if cv2.waitKey(1) & 0xFF == ord("q"):
             break
 
     cap.release()
     cv2.destroyAllWindows()
-
+    
 if __name__ == "__main__":
     main()
