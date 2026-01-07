@@ -173,26 +173,84 @@ class ScoringEngine:
 
 class Visualizer:
     @staticmethod
-    def draw_overlay(image: np.ndarray, routes: List[Dict], assignments: List[Dict]) -> np.ndarray:
+    def transform_points(points: List[Tuple], H_inv: np.ndarray) -> np.ndarray:
+        """Trasforma punti dal Template (Mappa 2D) allo Screen (Prospettiva Camera)"""
+        # Converti in formato adatto per perspectiveTransform: (N, 1, 2)
+        pts_array = np.array([points], dtype=np.float32).reshape(-1, 1, 2)
+        transformed_pts = cv2.perspectiveTransform(pts_array, H_inv)
+        return transformed_pts.astype(np.int32)
+
+    @staticmethod
+    def draw_overlay(image: np.ndarray, routes: List[Dict], assignments: List[Dict], H: np.ndarray, scores: Dict) -> np.ndarray:
+        if H is None:
+            return image
+        
         viz = image.copy()
-        # Draw all routes
+        h_img, w_img = viz.shape[:2]
+        
+        # Calcoliamo l'inversa dell'omografia: Da Template -> Schermo
+        try:
+            H_inv = np.linalg.inv(H)
+        except np.linalg.LinAlgError:
+            return viz # Evita crash se la matrice è singolare
+
+        # 1. Disegna TUTTE le rotte (in viola sottile) proiettate in prospettiva
         for route in routes:
-            poly = np.array(route["polyline"], dtype=np.int32)
-            cv2.polylines(viz, [poly], isClosed=False, color=(128, 0, 128), thickness=1)
-        # Highlight assigned routes
+            pts = [(p[0], p[1]) for p in route["polyline"]]
+            screen_pts = Visualizer.transform_points(pts, H_inv)
+            cv2.polylines(viz, [screen_pts], isClosed=False, color=(128, 100, 128), thickness=1, lineType=cv2.LINE_AA)
+
+        # 2. Disegna le rotte ASSEGNATE (più spesse ed evidenziate)
         for a in assignments:
             if a["assigned_route"]:
                 route = next(r for r in routes if r["id"] == a["assigned_route"]["route_id"])
-                poly = np.array(route["polyline"], dtype=np.int32)
-                cv2.polylines(viz, [poly], isClosed=False, color=(0, 255, 255), thickness=3)
+                pts = [(p[0], p[1]) for p in route["polyline"]]
+                screen_pts = Visualizer.transform_points(pts, H_inv)
+                
+                # Effetto "Glow" (disegna prima spesso sfocato, poi sottile)
+                color = Config.PLAYER_COLORS.get(a["train"]["class"], {}).get("train_color", (0,255,255))
+                cv2.polylines(viz, [screen_pts], isClosed=False, color=color, thickness=4, lineType=cv2.LINE_AA)
+
+        # 3. Disegna HUD (Tabellone Punteggi)
+        Visualizer.draw_scoreboard(viz, scores)
+        
         return viz
 
+    @staticmethod
+    def draw_scoreboard(img: np.ndarray, scores: Dict):
+        """Disegna un pannello semitrasparente con i punteggi"""
+        overlay = img.copy()
+        panel_x, panel_y = 20, 20
+        panel_w, panel_h = 300, 20 + (len(scores) * 30)
+        
+        # Sfondo semitrasparente
+        cv2.rectangle(overlay, (panel_x, panel_y), (panel_x + panel_w, panel_y + panel_h), (0, 0, 0), -1)
+        alpha = 0.6
+        cv2.addWeighted(overlay, alpha, img, 1 - alpha, 0, img)
+        
+        # Testo
+        y_offset = panel_y + 25
+        cv2.putText(img, "LIVE SCORES:", (panel_x + 10, y_offset), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
+        y_offset += 30
+        
+        sorted_scores = sorted(scores.items(), key=lambda x: x[1]['route_score'], reverse=True)
+        
+        for color_key, data in sorted_scores:
+            color = Config.PLAYER_COLORS.get(color_key, {}).get("train_color", (255,255,255))
+            text = f"{data['player_name']}: {data['route_score']} pts"
+            cv2.putText(img, text, (panel_x + 10, y_offset), cv2.FONT_HERSHEY_SIMPLEX, 0.6, color, 1, cv2.LINE_AA)
+            y_offset += 25
 
 # ==================== Pipeline Functions ====================
 
-# Modifica questa funzione
-def process_frame(frame: np.ndarray, template: np.ndarray, routes: List[Dict], last_H: np.ndarray = None):
-    # 1. Tenta di rilevare gli angoli
+def process_frame(frame: np.ndarray, 
+                  template: np.ndarray, 
+                  routes: List[Dict], 
+                  last_H: np.ndarray = None, 
+                  cached_assignments: List[Dict] = None, 
+                  detect_trains: bool = True):
+    
+    # --- FASE 1: TRACKING ---
     corner_dets = ImageProcessor.detect_with_yolo(Config.CORNERS_MODEL, frame)
     
     H = None
@@ -200,86 +258,105 @@ def process_frame(frame: np.ndarray, template: np.ndarray, routes: List[Dict], l
         corners = ImageProcessor.extract_corners(corner_dets)
         H = ImageProcessor.compute_homography(corners, template.shape)
     except RuntimeError:
-        # Rilevamento fallito (meno di 4 angoli). 
-        # Se abbiamo una vecchia omografia valida, usiamo quella!
         if last_H is not None:
             H = last_H
         else:
-            # Se è il primo frame e fallisce, non possiamo fare nulla
-            raise 
+            # Se fallisce e non abbiamo memoria, restituiamo il frame pulito
+            return frame, {}, None, None
 
-    # 2. Usa H (nuova o vecchia) per raddrizzare l'immagine
-    aligned = ImageProcessor.warp_image(frame, H, template.shape)
+    # --- FASE 2: ANALISI (Sull'immagine raddrizzata "virtualmente") ---
+    # Creiamo aligned SOLO se dobbiamo rilevare i treni (risparmio CPU)
+    assignments = cached_assignments
     
-    # 3. Rilevamento treni e logica di gioco (invariato)
-    train_dets = ImageProcessor.detect_with_yolo(Config.TRAINS_MODEL, aligned)
-    trains_mapped = [{"class": d["class"], "center_map": d["center"], "bbox": d["bbox"], "conf": d["conf"]} for d in train_dets]
-    assignments = RouteManager.assign_trains_to_routes(trains_mapped, routes)
+    if detect_trains or assignments is None:
+        aligned = ImageProcessor.warp_image(frame, H, template.shape)
+        train_dets = ImageProcessor.detect_with_yolo(Config.TRAINS_MODEL, aligned)
+        
+        trains_mapped = [{
+            "class": d["class"], 
+            "center_map": d["center"], # Coordinate nel mondo Template
+            "bbox": d["bbox"], 
+            "conf": d["conf"]
+        } for d in train_dets]
+        
+        assignments = RouteManager.assign_trains_to_routes(trains_mapped, routes)
+    
     scores = ScoringEngine.generate_player_scores(assignments)
     
-    # 4. Disegno overlay (invariato)
-    overlay = Visualizer.draw_overlay(aligned, routes, assignments)
+    # --- FASE 3: AR RENDERING (Sul frame ORIGINALE) ---
+    # Passiamo H per poter calcolare H_inv dentro il visualizer
+    overlay = Visualizer.draw_overlay(frame, routes, assignments, H, scores)
     
-    # Restituiamo anche H per poterla riutilizzare nel prossimo frame
-    return overlay, scores, H
+    return overlay, scores, H, assignments
 
 # ==================== Real-Time Demo ====================
 
 def main():
-    print("🚂 GetOffMyTrain - Real-Time Demo")
+    print("🚂 GetOffMyTrain - Optimized AR")
     cap = cv2.VideoCapture(0)
-    # Imposta risoluzione (opzionale, aiuta la stabilità se più alta)
     cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
     cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
 
     template = ImageProcessor.load_image(Config.TEMPLATE_PATH)
     routes = RouteManager.load_routes(Config.ROUTES_JSON)
 
-    # Variabile per ricordare l'ultima posizione valida della mappa
-    last_valid_H = None
-    # Contatore per "dimenticare" la vecchia posizione se passa troppo tempo
+    # --- Variabili di Stato ---
+    last_valid_H = None          # Memoria per la posizione della mappa
+    cached_assignments = None    # Memoria per la posizione dei treni
+    
     missed_frames = 0
-    MAX_MISSED_FRAMES = 10  # Dopo 10 frame persi, resetta (evita overlay bloccati se sposti il telefono altrove)
+    MAX_MISSED_FRAMES = 10
+    
+    # Configurazione Ottimizzazione
+    frame_count = 0
+    TRAIN_CHECK_INTERVAL = 15  # Controlla i treni ogni 15 frame (circa 2 volte al secondo)
 
     while True:
         ret, frame = cap.read()
         if not ret:
             break
-            
         try:
-            # Passiamo last_valid_H e riceviamo la nuova H
-            overlay, scores, current_H = process_frame(frame, template, routes, last_valid_H)
-            
-            # Se siamo qui, abbiamo avuto successo (o usato il backup)
-            #last_valid_H = current_H
-            # Invece di last_valid_H = current_H
-            if last_valid_H is None:
-                last_valid_H = current_H
-            else:
-                # 30% nuova posizione, 70% vecchia posizione (riduce il tremolio)
-                last_valid_H = 0.7 * last_valid_H + 0.3 * current_H
-                
-            missed_frames = 0 # Reset contatore errori
+            should_detect_trains = (frame_count % TRAIN_CHECK_INTERVAL == 0)
 
-            cv2.imshow("GetOffMyTrain - Live Overlay", overlay)
+            result = process_frame(
+                frame, template, routes, 
+                last_H=last_valid_H, 
+                cached_assignments=cached_assignments,
+                detect_trains=should_detect_trains
+            )
             
-            # Print scores (semplificato per leggibilità)
-            # ... (tuo codice di print) ...
+            # Unpack sicuro (se process_frame fallisce all'inizio potrebbe tornare dati parziali, 
+            # ma con la modifica sopra torna frame pulito se H è None)
+            overlay, scores, current_H, assignments = result
             
+            if current_H is not None:
+                cached_assignments = assignments
+                if last_valid_H is None:
+                    last_valid_H = current_H
+                else:
+                    # Smoothing aumentato per l'AR (meno jitter = più realismo)
+                    last_valid_H = 0.8 * last_valid_H + 0.2 * current_H
+                missed_frames = 0
+            else:
+                 # Se H è None (tracking perso), incrementa errori
+                 raise RuntimeError("Tracking lost")
+
+            cv2.imshow("GetOffMyTrain - AR Experience", overlay)
+        
         except Exception as e:
-            # Questo scatta solo se FALLISCE anche il backup (es. primo frame o troppi errori)
             missed_frames += 1
             if missed_frames > MAX_MISSED_FRAMES:
-                last_valid_H = None # Resetta se perdiamo la mappa per troppo tempo
+                last_valid_H = None 
+                cached_assignments = None # Se perdiamo la mappa, resettiamo anche i treni
             
-            # Mostra il frame originale così l'utente vede cosa inquadra
-            cv2.imshow("GetOffMyTrain - Live Overlay", frame) 
+            cv2.imshow("GetOffMyTrain - Live Overlay", frame)
 
+        frame_count += 1
         if cv2.waitKey(1) & 0xFF == ord("q"):
             break
 
     cap.release()
     cv2.destroyAllWindows()
-    
+
 if __name__ == "__main__":
     main()
