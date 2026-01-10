@@ -1,107 +1,317 @@
 {
-  "image_source": "EUROPE/pictures/06_D.jpg",
+  "image_source": "EUROPE/pictures/01_A.jpg",
   "template_source": "EUROPE/map.jpg",
   "timestamp": "C:\\Users\\mesit\\OneDrive\\Desktop\\Studio\\Valerio\\Università\\MAGISTRALE\\SECONDO ANNO\\COMPUTER VISION\\GetOffMyTrain-main",
   "detections": {
-    "trains_found": 144,
-    "routes_available": 48
+    "trains_found": 88,
+    "routes_available": 100
   },
   "player_scores": {
-    "green_train": {
-      "player_name": "Player 4",
-      "routes_completed": 2,
-      "route_score": 6,
+    "yellow_train": {
+      "player_name": "Player 3",
+      "routes_completed": 7,
+      "route_score": 30,
       "routes": [
         {
-          "route_id": "london-brussels",
-          "distance_px": 5.997620019537604,
-          "from": "London",
-          "to": "Brussels",
+          "route_id": "kobenhavn-stockholm-1",
+          "distance_px": 1.8420910415902376,
+          "from": "Kobenhavn",
+          "to": "Stockholm",
+          "length": 3
+        },
+        {
+          "route_id": "smolensk-wilno",
+          "distance_px": 2.1802670993363775,
+          "from": "Smolensk",
+          "to": "Wilno",
+          "length": 3
+        },
+        {
+          "route_id": "amsterdam-essen",
+          "distance_px": 0.19902106015615698,
+          "from": "Amsterdam",
+          "to": "Essen",
+          "length": 3
+        },
+        {
+          "route_id": "berlin-warszawa-2",
+          "distance_px": 1.5441207885742188,
+          "from": "Berlin",
+          "to": "Warszawa",
+          "length": 4
+        },
+        {
+          "route_id": "paris-pamplona-2",
+          "distance_px": 1.9264624479469634,
+          "from": "Paris",
+          "to": "Pamplona",
+          "length": 4
+        },
+        {
+          "route_id": "dieppe-bruxelles",
+          "distance_px": 0.8584665733777462,
+          "from": "Dieppe",
+          "to": "Bruxelles",
           "length": 2
         },
         {
-          "route_id": "warsaw-krakow",
-          "distance_px": 6.675607291611275,
-          "from": "Warsaw",
-          "to": "Krakow",
+          "route_id": "paris-bruxelles-2",
+          "distance_px": 2.5488124643247407,
+          "from": "Paris",
+          "to": "Bruxelles",
+          "length": 2
+        }
+      ]
+    },
+    "green_train": {
+      "player_name": "Player 4",
+      "routes_completed": 8,
+      "route_score": 30,
+      "routes": [
+        {
+          "route_id": "berlin-wien",
+          "distance_px": 1.7843478633918282,
+          "from": "Berlin",
+          "to": "Wien",
           "length": 3
+        },
+        {
+          "route_id": "sarajevo-athina",
+          "distance_px": 0.997039794921875,
+          "from": "Sarajevo",
+          "to": "Athina",
+          "length": 4
+        },
+        {
+          "route_id": "wilno-riga",
+          "distance_px": 1.8702595447578887,
+          "from": "Wilno",
+          "to": "Riga",
+          "length": 4
+        },
+        {
+          "route_id": "rostov-kharkov",
+          "distance_px": 1.00250244140625,
+          "from": "Rostov",
+          "to": "Kharkov",
+          "length": 2
+        },
+        {
+          "route_id": "zurich-venice",
+          "distance_px": 2.0120493552562535,
+          "from": "Zurich",
+          "to": "Venice",
+          "length": 2
+        },
+        {
+          "route_id": "frankfurt-essen",
+          "distance_px": 1.675365470458697,
+          "from": "Frankfurt",
+          "to": "Essen",
+          "length": 2
+        },
+        {
+          "route_id": "athina-sofia",
+          "distance_px": 1.2705203711487865,
+          "from": "Athina",
+          "to": "Sofia",
+          "length": 3
+        },
+        {
+          "route_id": "zurich-munchen",
+          "distance_px": 2.4424960414843477,
+          "from": "Zurich",
+          "to": "Munchen",
+          "length": 2
         }
       ]
     },
     "red_train": {
       "player_name": "Player 1",
-      "routes_completed": 5,
-      "route_score": 63,
+      "routes_completed": 10,
+      "route_score": 36,
       "routes": [
         {
-          "route_id": "dublin-belfast",
-          "distance_px": 6.569589098242606,
-          "from": "Dublin",
-          "to": "Edinburgh",
+          "route_id": "kyiv-smolensk",
+          "distance_px": 1.1644784548145428,
+          "from": "Kyiv",
+          "to": "Smolensk",
+          "length": 3
+        },
+        {
+          "route_id": "pamplona-marseille",
+          "distance_px": 0.8271993757709867,
+          "from": "Pamplona",
+          "to": "Marseille",
           "length": 4
         },
         {
-          "route_id": "london-edinburgh",
-          "distance_px": 1.6651564301601356,
-          "from": "London",
-          "to": "Edinburgh",
-          "length": 7
+          "route_id": "frankfurt-berlin-2",
+          "distance_px": 3.4568431407742386,
+          "from": "Frankfurt",
+          "to": "Berlin",
+          "length": 3
         },
         {
-          "route_id": "oslo-stockholm",
-          "distance_px": 0.6465144334768536,
-          "from": "Oslo",
-          "to": "Stockholm",
-          "length": 4
+          "route_id": "warszawa-wilno",
+          "distance_px": 4.239586386605969,
+          "from": "Warszawa",
+          "to": "Wilno",
+          "length": 3
         },
         {
-          "route_id": "stockholm-petrograd",
-          "distance_px": 6.680227998869124,
-          "from": "Stockholm",
+          "route_id": "paris-bruxelles-1",
+          "distance_px": 2.6493084998929395,
+          "from": "Paris",
+          "to": "Bruxelles",
+          "length": 2
+        },
+        {
+          "route_id": "erzurum-sochi",
+          "distance_px": 0.7841538168741031,
+          "from": "Erzurum",
+          "to": "Sochi",
+          "length": 3
+        },
+        {
+          "route_id": "frankfurt-munchen",
+          "distance_px": 1.2003033420049545,
+          "from": "Frankfurt",
+          "to": "Munchen",
+          "length": 2
+        },
+        {
+          "route_id": "budapest-sarajevo",
+          "distance_px": 0.585745616302118,
+          "from": "Budapest",
+          "to": "Sarajevo",
+          "length": 3
+        },
+        {
+          "route_id": "wien-budapest-1",
+          "distance_px": 0.27030982887183125,
+          "from": "Wien",
+          "to": "Budapest",
+          "length": 1
+        },
+        {
+          "route_id": "zagrab-sarajevo",
+          "distance_px": 1.399872327740736,
+          "from": "Zagrab",
+          "to": "Sarajevo",
+          "length": 3
+        }
+      ]
+    },
+    "blue_train": {
+      "player_name": "Player 2",
+      "routes_completed": 6,
+      "route_score": 24,
+      "routes": [
+        {
+          "route_id": "essen-berlin",
+          "distance_px": 1.7210919960642574,
+          "from": "Essen",
+          "to": "Berlin",
+          "length": 2
+        },
+        {
+          "route_id": "lisboa-cadiz",
+          "distance_px": 0.8088559520879918,
+          "from": "Lisboa",
+          "to": "Cadiz",
+          "length": 2
+        },
+        {
+          "route_id": "sofia-constantinople",
+          "distance_px": 1.4083944476882766,
+          "from": "Sofia",
+          "to": "Constantinople",
+          "length": 3
+        },
+        {
+          "route_id": "wilno-petrograd",
+          "distance_px": 0.8033510355114434,
+          "from": "Wilno",
           "to": "Petrograd",
-          "length": 8
+          "length": 4
         },
         {
-          "route_id": "copenhagen-stockholm",
-          "distance_px": 4.819096284019518,
-          "from": "Copenhagen",
-          "to": "Stockholm",
-          "length": 5
+          "route_id": "wien-warszawa",
+          "distance_px": 3.3831901498829184,
+          "from": "Wien",
+          "to": "Warszawa",
+          "length": 4
+        },
+        {
+          "route_id": "bruxelles-frankfurt",
+          "distance_px": 1.2635045028827523,
+          "from": "Bruxelles",
+          "to": "Frankfurt",
+          "length": 2
         }
       ]
     },
     "black_train": {
       "player_name": "Player 5",
-      "routes_completed": 1,
-      "route_score": 27,
-      "routes": [
-        {
-          "route_id": "lisbon-moscow",
-          "distance_px": 5.8603759765625,
-          "from": "Lisbon",
-          "to": "Moscow",
-          "length": 10
-        }
-      ]
-    },
-    "yellow_train": {
-      "player_name": "Player 3",
-      "routes_completed": 1,
+      "routes_completed": 7,
       "route_score": 24,
       "routes": [
         {
-          "route_id": "petrograd-athens",
-          "distance_px": 5.994239622704385,
-          "from": "Petrograd",
-          "to": "Athens",
-          "length": 9
+          "route_id": "danzic-riga",
+          "distance_px": 3.4530815442030116,
+          "from": "Danzic",
+          "to": "Riga",
+          "length": 3
+        },
+        {
+          "route_id": "munchen-venezia",
+          "distance_px": 1.3937770369933296,
+          "from": "Munchen",
+          "to": "Venezia",
+          "length": 2
+        },
+        {
+          "route_id": "angora-erzurum",
+          "distance_px": 0.6234378016121354,
+          "from": "Angora",
+          "to": "Erzurum",
+          "length": 3
+        },
+        {
+          "route_id": "roma-venezia",
+          "distance_px": 1.3122186957656776,
+          "from": "Roma",
+          "to": "Venezia",
+          "length": 2
+        },
+        {
+          "route_id": "london-edinburgh-1",
+          "distance_px": 4.083894333764969,
+          "from": "London",
+          "to": "Edinburgh",
+          "length": 4
+        },
+        {
+          "route_id": "sofia-constantinople",
+          "distance_px": 1.3119631295958887,
+          "from": "Sofia",
+          "to": "Constantinople",
+          "length": 3
+        },
+        {
+          "route_id": "bruxelles-amsterdam",
+          "distance_px": 0.355486138143787,
+          "from": "Bruxelles",
+          "to": "Amsterdam",
+          "length": 1
         }
       ]
     }
   },
   "assignments_summary": {
-    "total_assignments": 144,
-    "assigned": 12,
-    "unassigned": 132
+    "total_assignments": 88,
+    "assigned": 87,
+    "unassigned": 1
   }
 }

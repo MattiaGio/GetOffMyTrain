@@ -1,1014 +1,190 @@
 [
-  {
-    "id": "dublin-edinburgh",
-    "from": "Dublin",
-    "to": "Edinburgh",
-    "length": 4,
-    "polyline": [
-      [
-        65,
-        145
-      ],
-      [
-        90,
-        120
-      ],
-      [
-        110,
-        90
-      ],
-      [
-        125,
-        65
-      ]
-    ]
-  },
-  {
-    "id": "london-edinburgh",
-    "from": "London",
-    "to": "Edinburgh",
-    "length": 7,
-    "polyline": [
-      [
-        125,
-        165
-      ],
-      [
-        125,
-        140
-      ],
-      [
-        125,
-        110
-      ],
-      [
-        125,
-        65
-      ]
-    ]
-  },
-  {
-    "id": "dublin-london",
-    "from": "Dublin",
-    "to": "London",
-    "length": 4,
-    "polyline": [
-      [
-        65,
-        145
-      ],
-      [
-        90,
-        160
-      ],
-      [
-        110,
-        165
-      ],
-      [
-        125,
-        165
-      ]
-    ]
-  },
-  {
-    "id": "london-amsterdam",
-    "from": "London",
-    "to": "Amsterdam",
-    "length": 2,
-    "polyline": [
-      [
-        125,
-        165
-      ],
-      [
-        160,
-        155
-      ]
-    ]
-  },
-  {
-    "id": "london-brussels",
-    "from": "London",
-    "to": "Brussels",
-    "length": 2,
-    "polyline": [
-      [
-        125,
-        165
-      ],
-      [
-        165,
-        175
-      ]
-    ]
-  },
-  {
-    "id": "amsterdam-brussels",
-    "from": "Amsterdam",
-    "to": "Brussels",
-    "length": 1,
-    "polyline": [
-      [
-        160,
-        155
-      ],
-      [
-        165,
-        175
-      ]
-    ]
-  },
-  {
-    "id": "brussels-paris",
-    "from": "Brussels",
-    "to": "Paris",
-    "length": 2,
-    "polyline": [
-      [
-        165,
-        175
-      ],
-      [
-        160,
-        215
-      ]
-    ]
-  },
-  {
-    "id": "london-paris",
-    "from": "London",
-    "to": "Paris",
-    "length": 4,
-    "polyline": [
-      [
-        125,
-        165
-      ],
-      [
-        140,
-        185
-      ],
-      [
-        150,
-        200
-      ],
-      [
-        160,
-        215
-      ]
-    ]
-  },
-  {
-    "id": "amsterdam-hamburg",
-    "from": "Amsterdam",
-    "to": "Hamburg",
-    "length": 3,
-    "polyline": [
-      [
-        160,
-        155
-      ],
-      [
-        185,
-        150
-      ],
-      [
-        210,
-        148
-      ]
-    ]
-  },
-  {
-    "id": "amsterdam-copenhagen",
-    "from": "Amsterdam",
-    "to": "Copenhagen",
-    "length": 4,
-    "polyline": [
-      [
-        160,
-        155
-      ],
-      [
-        185,
-        135
-      ],
-      [
-        210,
-        118
-      ]
-    ]
-  },
-  {
-    "id": "copenhagen-stockholm",
-    "from": "Copenhagen",
-    "to": "Stockholm",
-    "length": 5,
-    "polyline": [
-      [
-        210,
-        118
-      ],
-      [
-        245,
-        90
-      ],
-      [
-        275,
-        65
-      ]
-    ]
-  },
-  {
-    "id": "stockholm-petrograd",
-    "from": "Stockholm",
-    "to": "Petrograd",
-    "length": 8,
-    "polyline": [
-      [
-        275,
-        65
-      ],
-      [
-        310,
-        48
-      ],
-      [
-        350,
-        35
-      ],
-      [
-        395,
-        25
-      ]
-    ]
-  },
-  {
-    "id": "oslo-stockholm",
-    "from": "Oslo",
-    "to": "Stockholm",
-    "length": 4,
-    "polyline": [
-      [
-        240,
-        90
-      ],
-      [
-        260,
-        80
-      ],
-      [
-        275,
-        65
-      ]
-    ]
-  },
-  {
-    "id": "hamburg-berlin",
-    "from": "Hamburg",
-    "to": "Berlin",
-    "length": 2,
-    "polyline": [
-      [
-        210,
-        148
-      ],
-      [
-        240,
-        160
-      ]
-    ]
-  },
-  {
-    "id": "berlin-warsaw",
-    "from": "Berlin",
-    "to": "Warsaw",
-    "length": 4,
-    "polyline": [
-      [
-        240,
-        160
-      ],
-      [
-        280,
-        175
-      ]
-    ]
-  },
-  {
-    "id": "berlin-krakow",
-    "from": "Berlin",
-    "to": "Krakow",
-    "length": 4,
-    "polyline": [
-      [
-        240,
-        160
-      ],
-      [
-        260,
-        190
-      ],
-      [
-        280,
-        220
-      ]
-    ]
-  },
-  {
-    "id": "warsaw-krakow",
-    "from": "Warsaw",
-    "to": "Krakow",
-    "length": 3,
-    "polyline": [
-      [
-        280,
-        175
-      ],
-      [
-        280,
-        200
-      ],
-      [
-        280,
-        220
-      ]
-    ]
-  },
-  {
-    "id": "paris-lyon",
-    "from": "Paris",
-    "to": "Lyon",
-    "length": 3,
-    "polyline": [
-      [
-        160,
-        215
-      ],
-      [
-        175,
-        245
-      ],
-      [
-        190,
-        270
-      ]
-    ]
-  },
-  {
-    "id": "paris-zurich",
-    "from": "Paris",
-    "to": "Zurich",
-    "length": 3,
-    "polyline": [
-      [
-        160,
-        215
-      ],
-      [
-        180,
-        245
-      ],
-      [
-        205,
-        260
-      ]
-    ]
-  },
-  {
-    "id": "zurich-venice",
-    "from": "Zurich",
-    "to": "Venice",
-    "length": 2,
-    "polyline": [
-      [
-        205,
-        260
-      ],
-      [
-        225,
-        280
-      ]
-    ]
-  },
-  {
-    "id": "zurich-munich",
-    "from": "Zurich",
-    "to": "Munich",
-    "length": 2,
-    "polyline": [
-      [
-        205,
-        260
-      ],
-      [
-        230,
-        255
-      ]
-    ]
-  },
-  {
-    "id": "munich-berlin",
-    "from": "Munich",
-    "to": "Berlin",
-    "length": 4,
-    "polyline": [
-      [
-        230,
-        255
-      ],
-      [
-        240,
-        210
-      ],
-      [
-        240,
-        180
-      ],
-      [
-        240,
-        160
-      ]
-    ]
-  },
-  {
-    "id": "venice-roma",
-    "from": "Venice",
-    "to": "Roma",
-    "length": 4,
-    "polyline": [
-      [
-        225,
-        280
-      ],
-      [
-        235,
-        315
-      ],
-      [
-        245,
-        340
-      ],
-      [
-        250,
-        360
-      ]
-    ]
-  },
-  {
-    "id": "roma-naples",
-    "from": "Roma",
-    "to": "Naples",
-    "length": 2,
-    "polyline": [
-      [
-        250,
-        360
-      ],
-      [
-        258,
-        395
-      ]
-    ]
-  },
-  {
-    "id": "roma-athens",
-    "from": "Roma",
-    "to": "Athens",
-    "length": 6,
-    "polyline": [
-      [
-        250,
-        360
-      ],
-      [
-        270,
-        375
-      ],
-      [
-        295,
-        390
-      ],
-      [
-        320,
-        405
-      ]
-    ]
-  },
-  {
-    "id": "lisbon-madrid",
-    "from": "Lisbon",
-    "to": "Madrid",
-    "length": 3,
-    "polyline": [
-      [
-        45,
-        280
-      ],
-      [
-        85,
-        280
-      ],
-      [
-        120,
-        280
-      ]
-    ]
-  },
-  {
-    "id": "madrid-barcelona",
-    "from": "Madrid",
-    "to": "Barcelona",
-    "length": 3,
-    "polyline": [
-      [
-        120,
-        280
-      ],
-      [
-        155,
-        270
-      ]
-    ]
-  },
-  {
-    "id": "madrid-paris",
-    "from": "Madrid",
-    "to": "Paris",
-    "length": 6,
-    "polyline": [
-      [
-        120,
-        280
-      ],
-      [
-        135,
-        265
-      ],
-      [
-        150,
-        240
-      ],
-      [
-        160,
-        215
-      ]
-    ]
-  },
-  {
-    "id": "barcelona-marseille",
-    "from": "Barcelona",
-    "to": "Marseille",
-    "length": 3,
-    "polyline": [
-      [
-        155,
-        270
-      ],
-      [
-        175,
-        268
-      ]
-    ]
-  },
-  {
-    "id": "marseille-lyon",
-    "from": "Marseille",
-    "to": "Lyon",
-    "length": 2,
-    "polyline": [
-      [
-        175,
-        268
-      ],
-      [
-        175,
-        250
-      ]
-    ]
-  },
-  {
-    "id": "marseille-roma",
-    "from": "Marseille",
-    "to": "Roma",
-    "length": 5,
-    "polyline": [
-      [
-        175,
-        268
-      ],
-      [
-        195,
-        290
-      ],
-      [
-        220,
-        320
-      ],
-      [
-        250,
-        360
-      ]
-    ]
-  },
-  {
-    "id": "krakow-vienna",
-    "from": "Krakow",
-    "to": "Vienna",
-    "length": 2,
-    "polyline": [
-      [
-        280,
-        220
-      ],
-      [
-        300,
-        235
-      ]
-    ]
-  },
-  {
-    "id": "vienna-budapest",
-    "from": "Vienna",
-    "to": "Budapest",
-    "length": 2,
-    "polyline": [
-      [
-        300,
-        235
-      ],
-      [
-        310,
-        255
-      ]
-    ]
-  },
-  {
-    "id": "budapest-bucharest",
-    "from": "Budapest",
-    "to": "Bucharest",
-    "length": 4,
-    "polyline": [
-      [
-        310,
-        255
-      ],
-      [
-        330,
-        270
-      ],
-      [
-        355,
-        285
-      ]
-    ]
-  },
-  {
-    "id": "budapest-sofia",
-    "from": "Budapest",
-    "to": "Sofia",
-    "length": 4,
-    "polyline": [
-      [
-        310,
-        255
-      ],
-      [
-        330,
-        285
-      ],
-      [
-        350,
-        320
-      ]
-    ]
-  },
-  {
-    "id": "sofia-istanbul",
-    "from": "Sofia",
-    "to": "Istanbul",
-    "length": 3,
-    "polyline": [
-      [
-        350,
-        320
-      ],
-      [
-        360,
-        350
-      ]
-    ]
-  },
-  {
-    "id": "istanbul-athens",
-    "from": "Istanbul",
-    "to": "Athens",
-    "length": 4,
-    "polyline": [
-      [
-        360,
-        350
-      ],
-      [
-        340,
-        375
-      ],
-      [
-        320,
-        405
-      ]
-    ]
-  },
-  {
-    "id": "istanbul-sochi",
-    "from": "Istanbul",
-    "to": "Sochi",
-    "length": 6,
-    "polyline": [
-      [
-        360,
-        350
-      ],
-      [
-        400,
-        340
-      ],
-      [
-        440,
-        330
-      ],
-      [
-        475,
-        328
-      ]
-    ]
-  },
-  {
-    "id": "bucharest-sochi",
-    "from": "Bucharest",
-    "to": "Sochi",
-    "length": 5,
-    "polyline": [
-      [
-        355,
-        285
-      ],
-      [
-        400,
-        300
-      ],
-      [
-        440,
-        315
-      ],
-      [
-        475,
-        328
-      ]
-    ]
-  },
-  {
-    "id": "warsaw-riga",
-    "from": "Warsaw",
-    "to": "Riga",
-    "length": 4,
-    "polyline": [
-      [
-        280,
-        175
-      ],
-      [
-        290,
-        145
-      ],
-      [
-        300,
-        115
-      ]
-    ]
-  },
-  {
-    "id": "riga-petrograd",
-    "from": "Riga",
-    "to": "Petrograd",
-    "length": 4,
-    "polyline": [
-      [
-        300,
-        115
-      ],
-      [
-        350,
-        70
-      ],
-      [
-        395,
-        25
-      ]
-    ]
-  },
-  {
-    "id": "moscow-petrograd",
-    "from": "Moscow",
-    "to": "Petrograd",
-    "length": 5,
-    "polyline": [
-      [
-        420,
-        115
-      ],
-      [
-        415,
-        80
-      ],
-      [
-        395,
-        25
-      ]
-    ]
-  },
-  {
-    "id": "moscow-kyiv",
-    "from": "Moscow",
-    "to": "Kyiv",
-    "length": 3,
-    "polyline": [
-      [
-        420,
-        115
-      ],
-      [
-        410,
-        165
-      ]
-    ]
-  },
-  {
-    "id": "warsaw-wilno",
-    "from": "Warsaw",
-    "to": "Wilno",
-    "length": 2,
-    "polyline": [
-      [
-        280,
-        175
-      ],
-      [
-        300,
-        155
-      ]
-    ]
-  },
-  {
-    "id": "wilno-moscow",
-    "from": "Wilno",
-    "to": "Moscow",
-    "length": 5,
-    "polyline": [
-      [
-        300,
-        155
-      ],
-      [
-        350,
-        135
-      ],
-      [
-        400,
-        120
-      ],
-      [
-        420,
-        115
-      ]
-    ]
-  },
-  {
-    "id": "petrograd-athens",
-    "from": "Petrograd",
-    "to": "Athens",
-    "length": 9,
-    "polyline": [
-      [
-        395,
-        25
-      ],
-      [
-        380,
-        60
-      ],
-      [
-        350,
-        100
-      ],
-      [
-        320,
-        140
-      ],
-      [
-        295,
-        175
-      ],
-      [
-        270,
-        250
-      ],
-      [
-        265,
-        330
-      ],
-      [
-        295,
-        405
-      ],
-      [
-        320,
-        405
-      ]
-    ]
-  },
-  {
-    "id": "lisbon-moscow",
-    "from": "Lisbon",
-    "to": "Moscow",
-    "length": 10,
-    "polyline": [
-      [
-        45,
-        280
-      ],
-      [
-        80,
-        280
-      ],
-      [
-        125,
-        250
-      ],
-      [
-        160,
-        215
-      ],
-      [
-        200,
-        180
-      ],
-      [
-        270,
-        150
-      ],
-      [
-        340,
-        130
-      ],
-      [
-        420,
-        115
-      ]
-    ]
-  },
-  {
-    "id": "lisbon-sochi",
-    "from": "Lisbon",
-    "to": "Sochi",
-    "length": 11,
-    "polyline": [
-      [
-        45,
-        280
-      ],
-      [
-        80,
-        280
-      ],
-      [
-        125,
-        250
-      ],
-      [
-        160,
-        215
-      ],
-      [
-        220,
-        260
-      ],
-      [
-        280,
-        280
-      ],
-      [
-        350,
-        300
-      ],
-      [
-        420,
-        315
-      ],
-      [
-        475,
-        328
-      ]
-    ]
-  }
+  {"id": "london-edinburgh-1","from": "London","to": "Edinburgh","length": 4,"color": "black","polyline": [[120,45],[165,150]]},
+  {"id": "london-edinburgh-2","from": "London","to": "Edinburgh","length": 4,"color": "orange","polyline": [[130,40],[175,150]]},
+  
+  {"id": "london-amsterdam","from": "London","to": "Amsterdam","length": 2,"color": "gray","polyline": [[180,155],[240,155]]},
+  
+  {"id": "london-dieppe-1","from": "London","to": "Dieppe","length": 2,"color": "gray","polyline": [[165,160],[160,220]]},
+  {"id": "london-dieppe-2","from": "London","to": "Dieppe","length": 2,"color": "gray","polyline": [[175,160],[170,220]]},
+  
+  {"id": "dieppe-brest","from": "Dieppe","to": "Brest","length": 2,"color": "orange","polyline": [[155,225],[125,225],[100,240]]},
+  
+  {"id": "dieppe-paris","from": "Dieppe","to": "Paris","length": 1,"color": "pink","polyline": [[175,230],[195,250]]},
+  
+  {"id": "dieppe-bruxelles","from": "Dieppe","to": "Bruxelles","length": 2,"color": "green","polyline": [[180,225],[225,190]]},
+
+  {"id": "paris-pamplona-1","from": "Paris","to": "Pamplona","length": 4,"color": "blue","polyline": [[190,270],[185,305],[170,345],[150,375]]},
+  {"id": "paris-pamplona-2","from": "Paris","to": "Pamplona","length": 4,"color": "green","polyline": [[200,270],[195,305],[180,345],[160,380]]},
+
+  {"id": "pamplona-brest","from": "Pamplona","to": "Brest","length": 4,"color": "pink","polyline": [[150,355],[150,310],[140,285],[125,270],[105,260]]},
+  
+  {"id": "pamplona-madrid-1","from": "Pamplona","to": "Madrid","length": 3,"color": "black","polyline": [[140,380],[75,445]]},
+  {"id": "pamplona-madrid-2","from": "Pamplona","to": "Madrid","length": 3,"color": "white","polyline": [[150,390],[85,450]]},
+  
+  {"id": "pamplona-marseille","from": "Pamplona","to": "Marseille","length": 4,"color": "red","polyline": [[165,390],[190,395],[200,360],[235,360],[260,375]]},
+  
+  {"id": "pamplona-barcelona","from": "Pamplona","to": "Barcelona","length": 2,"color": "gray","polyline": [[155,395],[160,450]]},
+
+  {"id": "paris-bruxelles-1", "from": "Paris", "to": "Bruxelles", "length": 2, "color": "red", "polyline": [[210,255],[240,205]]},
+  {"id": "paris-bruxelles-2", "from": "Paris", "to": "Bruxelles", "length": 2, "color": "yellow", "polyline": [[200,250],[225,200]]},
+
+  {"id": "bruxelles-amsterdam", "from": "Bruxelles", "to": "Amsterdam", "length": 1, "color": "black", "polyline": [[235,190],[250,165]]},
+  
+  {"id": "bruxelles-frankfurt", "from": "Bruxelles", "to": "Frankfurt", "length": 2, "color": "blue", "polyline": [[240,200],[270,190],[290,215]]},
+
+  {"id": "amsterdam-essen", "from": "Amsterdam", "to": "Essen", "length": 3, "color": "yellow", "polyline": [[250,150],[255,130],[290,135],[310,160]]},
+  
+  {"id": "amsterdam-frankfurt", "from": "Amsterdam", "to": "Frankfurt", "length": 2, "color": "white", "polyline": [[260,165],[300,205]]},
+
+  {"id": "paris-frankfurt-1", "from": "Paris", "to": "Frankfurt", "length": 3, "color": "white", "polyline": [[220,260],[260,245],[295,220]]},
+  {"id": "paris-frankfurt-2", "from": "Paris", "to": "Frankfurt", "length": 3, "color": "orange", "polyline": [[225,270],[265,255],[300,230]]},
+
+  {"id": "frankfurt-essen", "from": "Frankfurt", "to": "Essen", "length": 2, "color": "green", "polyline": [[305,205],[335,190],[325,170]]},
+  
+  {"id": "frankfurt-berlin-1", "from": "Frankfurt", "to": "Berlin", "length": 3, "color": "black", "polyline": [[305,215],[385,180]]},
+  {"id": "frankfurt-berlin-2", "from": "Frankfurt", "to": "Berlin", "length": 3, "color": "red", "polyline": [[310,225],[390,190]]},
+  
+  {"id": "frankfurt-danzic", "from": "Frankfurt", "to": "Danzic", "length": 4, "color": "gray", "polyline": [[395,165],[400,135],[420,110],[450,105],[475,105]]},
+  
+  {"id": "danzic-riga", "from": "Danzic", "to": "Riga", "length": 3, "color": "black", "polyline": [[480,105],[490,80],[510,55],[540,45]]},
+  
+  {"id": "danzic-warszawa", "from": "Danzic", "to": "Warszawa", "length": 2, "color": "gray", "polyline": [[485,120],[515,135],[520,165]]},
+
+  {"id": "essen-berlin", "from": "Essen", "to": "Berlin", "length": 2, "color": "blue", "polyline": [[330,160],[385,170]]},
+  
+  {"id": "essen-kobenhavn-1", "from": "Essen", "to": "Kobenhavn", "length": 3, "color": "gray", "polyline": [[315,155],[360,80]]},
+  {"id": "essen-kobenhavn-2", "from": "Essen", "to": "Kobenhavn", "length": 3, "color": "gray", "polyline": [[320,160],[370,90]]},
+
+  {"id": "kobenhavn-stockholm-1","from": "Kobenhavn","to": "Stockholm","length": 3, "color": "yellow","polyline": [[370,75],[405,40],[440,20]]},
+  {"id": "kobenhavn-stockholm-2","from": "Kobenhavn","to": "Stockholm","length": 3, "color": "white","polyline": [[380,80],[410,50],[443,30]]},
+ 
+  {"id": "stockholm-petrograd","from": "Stockholm","to": "Petrograd","length": 8,"color": "gray","polyline": [[455,25],[470,45],[500,20],[645,20],[670,35]]},
+  
+  {"id": "riga-petrograd","from": "Riga","to": "Petrograd","length": 4,"color": "gray","polyline": [[555,45],[670,45]]},
+  
+  {"id": "moscow-petrograd","from": "Moscow","to": "Petrograd","length": 4,"color": "white","polyline": [[755,125],[750,95],[735,70],[715,50],[685,40]]},
+
+  {"id": "frankfurt-munchen", "from": "Frankfurt", "to": "Munchen", "length": 2, "color": "pink", "polyline": [[305,230],[315,260],[340,255]]},
+
+  {"id": "munchen-wien", "from": "Munchen", "to": "Wien", "length": 3, "color": "orange", "polyline": [[355,260],[370,285],[405,290],[425,270]]},
+  
+  {"id": "munchen-venezia", "from": "Munchen", "to": "Venezia", "length": 2, "color": "blue", "polyline": [[350,270],[360,325]]},
+  
+  {"id": "venezia-zagrab", "from": "Venezia", "to": "Zagrab", "length": 2, "color": "gray", "polyline": [[365,330],[395,325],[420,340]]},
+
+  {"id": "zurich-munchen","from": "Zurich","to": "Munchen","length": 2, "color": "yellow","polyline": [[300,300],[345,265]]},
+  
+  {"id": "zurich-marseille","from": "Zurich","to": "Marseille","length": 2, "color": "pink","polyline": [[295,315],[280,370]]},
+
+  {"id": "berlin-warszawa-1","from": "Berlin","to": "Warszawa","length": 4,"color": "pink","polyline": [[400,175],[455,160],[510,165]]},
+  {"id": "berlin-warszawa-2","from": "Berlin","to": "Warszawa","length": 4,"color": "yellow","polyline": [[400,185],[455,175],[510,175]]},
+  
+  {"id": "berlin-wien","from": "Berlin","to": "Wien","length": 3,"color": "green","polyline": [[395,190],[410,230],[435,265]]},
+
+  {"id": "warszawa-wilno","from": "Warszawa","to": "Wilno","length": 3,"color": "red","polyline": [[530,170],[545,140],[575,140],[595,150]]},
+
+  {"id": "wien-budapest-1", "from": "Wien", "to": "Budapest", "length": 1, "color": "red", "polyline": [[445,275],[465,285]]},
+  {"id": "wien-budapest-2", "from": "Wien", "to": "Budapest", "length": 1, "color": "white", "polyline": [[440,280],[460,295]]},
+  
+  {"id": "wien-zagrab", "from": "Wien", "to": "Zagrab", "length": 2, "color": "gray", "polyline": [[430,280],[425,335]]},
+  
+  {"id": "wien-warszawa", "from": "Wien", "to": "Warszawa", "length": 4, "color": "blue", "polyline": [[440,265],[485,230],[515,180]]},
+
+  {"id": "zagrab-sarajevo", "from": "Zagrab", "to": "Sarajevo", "length": 3, "color": "red", "polyline": [[425,350],[430,380],[455,400],[485,390]]},
+
+  {"id": "budapest-zagrab", "from": "Budapest", "to": "Zagrab", "length": 2, "color": "orange", "polyline": [[465,295],[430,340]]},
+
+  {"id": "budapest-bucuresti", "from": "Budapest", "to": "Bucuresti", "length": 4, "color": "gray", "polyline": [[480,290],[580,345]]},
+  
+  {"id": "budapest-sarajevo", "from": "Budapest", "to": "Sarajevo", "length": 3, "color": "pink", "polyline": [[475,300],[490,380]]},
+  
+  {"id": "budapest-kyiv", "from": "Budapest", "to": "Kyiv", "length": 6, "color": "gray", "polyline": [[475,280],[545,230],[625,220]]},
+
+  {"id": "bucuresti-sofia", "from": "Bucuresti", "to": "Sofia", "length": 2, "color": "gray", "polyline": [[585,350],[580,380],[550,390]]},
+  
+  {"id": "bucuresti-constantinople", "from": "Bucuresti", "to": "Constantinople", "length": 3, "color": "yellow", "polyline": [[595,355],[630,435]]},
+  
+  {"id": "bucuresti-sevastopol", "from": "Bucuresti", "to": "Sevastopol", "length": 4, "color": "white", "polyline": [[600,340],[620,320],[650,315],[680,330],[695,350]]},
+  
+  {"id": "bucuresti-kyiv", "from": "Bucuresti", "to": "Kyiv", "length": 4, "color": "gray", "polyline": [[590,335],[625,230]]},
+
+  {"id": "sofia-constantinople", "from": "Sofia", "to": "Constantinople", "length": 3, "color": "blue", "polyline": [[550,400],[625,445]]},
+  
+  {"id": "sarajevo-athina", "from": "Sarajevo", "to": "Athina", "length": 4, "color": "green", "polyline": [[490,395],[490,480],[520,480]]},
+  
+  {"id": "sarajevo-sofia", "from": "Sarajevo", "to": "Sofia", "length": 2, "color": "gray", "polyline": [[500,385],[530,370],[540,390]]},
+
+  {"id": "athina-sofia", "from": "Athina", "to": "Sofia", "length": 3, "color": "pink", "polyline": [[540,400],[520,420],[515,445],[530,480]]},
+  
+  {"id": "athina-smyrna", "from": "Athina", "to": "Smyrna", "length": 2, "color": "gray", "polyline": [[535,485],[565,485],[590,500]]},
+
+  {"id": "roma-venezia", "from": "Roma", "to": "Venezia", "length": 2, "color": "black", "polyline": [[360,340],[370,395]]},
+  
+  {"id": "roma-brindisi", "from": "Roma", "to": "Brindisi", "length": 2, "color": "white", "polyline": [[380,400],[410,395],[430,420]]},
+
+  {"id": "roma-palermo", "from": "Roma", "to": "Palermo", "length": 4, "color": "gray", "polyline": [[370,410],[400,420],[415,450],[415,480],[395,500]]},
+  
+  {"id": "brindisi-palermo", "from": "Brindisi", "to": "Palermo", "length": 3, "color": "gray", "polyline": [[435,435],[445,460],[405,505]]},
+  
+  {"id": "brindisi-athena", "from": "Brindisi", "to": "Athena", "length": 4, "color": "gray", "polyline": [[445,430],[465,485],[495,495],[525,490]]},
+
+  {"id": "palermo-smyrna", "from": "Palermo", "to": "Smyrna", "length": 6, "color": "gray", "polyline": [[415,505],[590,510]]},
+  
+  {"id": "smyrna-constantinople", "from": "Smyrna", "to": "Constantinople", "length": 2, "color": "gray", "polyline": [[600,500],[625,450]]},
+  
+  {"id": "smyrna-angora", "from": "Smyrna", "to": "Angora", "length": 3, "color": "orange", "polyline": [[605,510],[660,510],[690,495]]},
+
+  {"id": "angora-constantinople", "from": "Angora", "to": "Constantinople", "length": 2, "color": "gray", "polyline": [[685,485],[640,450]]},
+  
+  {"id": "angora-erzurum", "from": "Angora", "to": "Erzurum", "length": 3, "color": "black", "polyline": [[700,495],[725,505],[760,500],[760,480]]},
+
+  {"id": "constantinople-sevastopol", "from": "Constantinople", "to": "Svastopol", "length": 4, "color": "gray", "polyline": [[635,440],[655,410],[670,425],[695,395],[690,365]]},
+  
+  {"id": "erzurum-sevastopol", "from": "Erzurum", "to": "Svastopol", "length": 4, "color": "gray", "polyline": [[750,465],[725,450],[705,425],[705,365]]},
+  
+  {"id": "erzurum-sochi", "from": "Erzurum", "to": "Sochi", "length": 3, "color": "red", "polyline": [[760,465],[770,375]]},
+  
+  {"id": "sevastopol-sochi", "from": "Svastopol", "to": "Sochi", "length": 2, "color": "gray", "polyline": [[710,360],[765,370]]},
+  
+  {"id": "sevastopol-rostov", "from": "Svastopol", "to": "Rostov", "length": 4, "color": "gray", "polyline": [[705,350],[715,285],[765,295]]},
+
+  {"id": "sochi-rostov", "from": "Sochi", "to": "Rostov", "length": 2, "color": "gray", "polyline": [[770,360],[775,305]]},
+  
+  {"id": "rostov-kharkov", "from": "Rostov", "to": "Kharkov", "length": 2, "color": "green", "polyline": [[775,290],[775,255],[750,255]]},
+  
+  {"id": "kyiv-kharkov", "from": "Kyiv", "to": "Kharkov", "length": 4, "color": "gray", "polyline": [[640,225],[650,250],[680,265],[710,265],[735,260]]},
+  
+  {"id": "kyiv-warszawa", "from": "Kyiv", "to": "Warszawa", "length": 4, "color": "gray", "polyline": [[630,210],[570,210],[540,195],[525,175]]},
+  
+  {"id": "kyiv-wilno", "from": "Kyiv", "to": "Wilno", "length": 2, "color": "gray", "polyline": [[635,205],[635,175],[615,160]]},
+  
+  {"id": "kyiv-smolensk", "from": "Kyiv", "to": "Smolensk", "length": 3, "color": "red", "polyline": [[645,215],[675,215],[695,190],[690,165]]},
+  
+  {"id": "smolensk-moskva", "from": "Smolensk", "to": "Moskva", "length": 2, "color": "orange", "polyline": [[695,155],[725,160],[750,140]]},
+  
+  {"id": "smolensk-wilno", "from": "Smolensk", "to": "Wilno", "length": 3, "color": "yellow", "polyline": [[680,150],[635,125],[615,150]]},
+
+  {"id": "wilno-petrograd", "from": "Wilno", "to": "Petrograd", "length": 4, "color": "blue", "polyline": [[610,145],[675,50]]},
+  
+  {"id": "wilno-riga", "from": "Wilno", "to": "Riga", "length": 4, "color": "green", "polyline": [[600,140],[555,110],[540,80],[545,50]]},
+
+  {"id": "kharkov-moskva", "from": "Kharkov", "to": "Moskva", "length": 4, "color": "gray", "polyline": [[750,250],[770,225],[775,200],[770,165],[760,140]]},
+
+  {"id": "marseille-roma","from": "Marseille","to": "Roma","length": 4, "color": "gray","polyline": [[285,380],[325,350],[360,400]]},
+
+  {"id": "barcelona-marseille", "from": "Barcelona", "to": "Marseille", "length": 4, "color": "gray", "polyline": [[170,450],[210,410],[265,385]]},
+
+  {"id": "marseille-paris", "from": "Marseille", "to": "Paris", "length": 4, "color": "gray", "polyline": [[270,375],[255,350],[225,335],[210,310],[210,280]]},
+  
+  {"id": "paris-zurich","from": "Paris","to": "Zurich","length": 3,"color": "gray","polyline": [[220,275],[235,300],[260,310],[290,310]]},
+  
+  {"id": "zurich-venice","from": "Zurich","to": "Venice","length": 2,"color": "green","polyline": [[305,310],[350,340]]},
+
+  {"id": "madrid-barcelona", "from": "Madrid", "to": "Barcelona", "length": 2, "color": "yellow", "polyline": [[95,455],[155,455]]},
+
+  {"id": "madrid-lisboa", "from": "Madrid", "to": "Lisboa", "length": 3, "color": "pink", "polyline": [[70,445],[45,430],[20,430],[20,460]]},
+  
+  {"id": "madrid-cadiz", "from": "Madrid", "to": "Cadiz", "length": 3, "color": "orange", "polyline": [[85,455],[105,475],[115,500],[80,510]]},
+
+  {"id": "lisboa-cadiz", "from": "Lisboa", "to": "Cadiz", "length": 2, "color": "blue", "polyline": [[25,475],[40,500],[70,510]]}
 ]
