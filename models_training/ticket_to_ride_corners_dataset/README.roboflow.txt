@@ -1,8 +1,8 @@
 
-ticket_to_ride_corners - v1 2025-12-01 11:37am
+ticket_to_ride_corners - v2 2026-01-09 5:51pm
 ==============================
 
-This dataset was exported via roboflow.com on December 1, 2025 at 10:37 AM GMT
+This dataset was exported via roboflow.com on January 9, 2026 at 5:01 PM GMT
 
 Roboflow is an end-to-end computer vision platform that helps you
 * collaborate with your team on computer vision projects
@@ -17,7 +17,7 @@ visit https://github.com/roboflow/notebooks
 
 To find over 100k other datasets and pre-trained models, visit https://universe.roboflow.com
 
-The dataset includes 40 images.
+The dataset includes 80 images.
 Corner are annotated in YOLOv8 format.
 
 The following pre-processing was applied to each image:

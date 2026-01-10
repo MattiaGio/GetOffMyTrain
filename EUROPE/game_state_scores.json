@@ -1,0 +1,107 @@
+{
+  "image_source": "EUROPE/pictures/06_D.jpg",
+  "template_source": "EUROPE/map.jpg",
+  "timestamp": "C:\\Users\\mesit\\OneDrive\\Desktop\\Studio\\Valerio\\Università\\MAGISTRALE\\SECONDO ANNO\\COMPUTER VISION\\GetOffMyTrain-main",
+  "detections": {
+    "trains_found": 144,
+    "routes_available": 48
+  },
+  "player_scores": {
+    "green_train": {
+      "player_name": "Player 4",
+      "routes_completed": 2,
+      "route_score": 6,
+      "routes": [
+        {
+          "route_id": "london-brussels",
+          "distance_px": 5.997620019537604,
+          "from": "London",
+          "to": "Brussels",
+          "length": 2
+        },
+        {
+          "route_id": "warsaw-krakow",
+          "distance_px": 6.675607291611275,
+          "from": "Warsaw",
+          "to": "Krakow",
+          "length": 3
+        }
+      ]
+    },
+    "red_train": {
+      "player_name": "Player 1",
+      "routes_completed": 5,
+      "route_score": 63,
+      "routes": [
+        {
+          "route_id": "dublin-belfast",
+          "distance_px": 6.569589098242606,
+          "from": "Dublin",
+          "to": "Edinburgh",
+          "length": 4
+        },
+        {
+          "route_id": "london-edinburgh",
+          "distance_px": 1.6651564301601356,
+          "from": "London",
+          "to": "Edinburgh",
+          "length": 7
+        },
+        {
+          "route_id": "oslo-stockholm",
+          "distance_px": 0.6465144334768536,
+          "from": "Oslo",
+          "to": "Stockholm",
+          "length": 4
+        },
+        {
+          "route_id": "stockholm-petrograd",
+          "distance_px": 6.680227998869124,
+          "from": "Stockholm",
+          "to": "Petrograd",
+          "length": 8
+        },
+        {
+          "route_id": "copenhagen-stockholm",
+          "distance_px": 4.819096284019518,
+          "from": "Copenhagen",
+          "to": "Stockholm",
+          "length": 5
+        }
+      ]
+    },
+    "black_train": {
+      "player_name": "Player 5",
+      "routes_completed": 1,
+      "route_score": 27,
+      "routes": [
+        {
+          "route_id": "lisbon-moscow",
+          "distance_px": 5.8603759765625,
+          "from": "Lisbon",
+          "to": "Moscow",
+          "length": 10
+        }
+      ]
+    },
+    "yellow_train": {
+      "player_name": "Player 3",
+      "routes_completed": 1,
+      "route_score": 24,
+      "routes": [
+        {
+          "route_id": "petrograd-athens",
+          "distance_px": 5.994239622704385,
+          "from": "Petrograd",
+          "to": "Athens",
+          "length": 9
+        }
+      ]
+    }
+  },
+  "assignments_summary": {
+    "total_assignments": 144,
+    "assigned": 12,
+    "unassigned": 132
+  }
+}

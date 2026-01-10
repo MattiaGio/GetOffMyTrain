@@ -1,0 +1,1014 @@
+[
+  {
+    "id": "dublin-edinburgh",
+    "from": "Dublin",
+    "to": "Edinburgh",
+    "length": 4,
+    "polyline": [
+      [
+        65,
+        145
+      ],
+      [
+        90,
+        120
+      ],
+      [
+        110,
+        90
+      ],
+      [
+        125,
+        65
+      ]
+    ]
+  },
+  {
+    "id": "london-edinburgh",
+    "from": "London",
+    "to": "Edinburgh",
+    "length": 7,
+    "polyline": [
+      [
+        125,
+        165
+      ],
+      [
+        125,
+        140
+      ],
+      [
+        125,
+        110
+      ],
+      [
+        125,
+        65
+      ]
+    ]
+  },
+  {
+    "id": "dublin-london",
+    "from": "Dublin",
+    "to": "London",
+    "length": 4,
+    "polyline": [
+      [
+        65,
+        145
+      ],
+      [
+        90,
+        160
+      ],
+      [
+        110,
+        165
+      ],
+      [
+        125,
+        165
+      ]
+    ]
+  },
+  {
+    "id": "london-amsterdam",
+    "from": "London",
+    "to": "Amsterdam",
+    "length": 2,
+    "polyline": [
+      [
+        125,
+        165
+      ],
+      [
+        160,
+        155
+      ]
+    ]
+  },
+  {
+    "id": "london-brussels",
+    "from": "London",
+    "to": "Brussels",
+    "length": 2,
+    "polyline": [
+      [
+        125,
+        165
+      ],
+      [
+        165,
+        175
+      ]
+    ]
+  },
+  {
+    "id": "amsterdam-brussels",
+    "from": "Amsterdam",
+    "to": "Brussels",
+    "length": 1,
+    "polyline": [
+      [
+        160,
+        155
+      ],
+      [
+        165,
+        175
+      ]
+    ]
+  },
+  {
+    "id": "brussels-paris",
+    "from": "Brussels",
+    "to": "Paris",
+    "length": 2,
+    "polyline": [
+      [
+        165,
+        175
+      ],
+      [
+        160,
+        215
+      ]
+    ]
+  },
+  {
+    "id": "london-paris",
+    "from": "London",
+    "to": "Paris",
+    "length": 4,
+    "polyline": [
+      [
+        125,
+        165
+      ],
+      [
+        140,
+        185
+      ],
+      [
+        150,
+        200
+      ],
+      [
+        160,
+        215
+      ]
+    ]
+  },
+  {
+    "id": "amsterdam-hamburg",
+    "from": "Amsterdam",
+    "to": "Hamburg",
+    "length": 3,
+    "polyline": [
+      [
+        160,
+        155
+      ],
+      [
+        185,
+        150
+      ],
+      [
+        210,
+        148
+      ]
+    ]
+  },
+  {
+    "id": "amsterdam-copenhagen",
+    "from": "Amsterdam",
+    "to": "Copenhagen",
+    "length": 4,
+    "polyline": [
+      [
+        160,
+        155
+      ],
+      [
+        185,
+        135
+      ],
+      [
+        210,
+        118
+      ]
+    ]
+  },
+  {
+    "id": "copenhagen-stockholm",
+    "from": "Copenhagen",
+    "to": "Stockholm",
+    "length": 5,
+    "polyline": [
+      [
+        210,
+        118
+      ],
+      [
+        245,
+        90
+      ],
+      [
+        275,
+        65
+      ]
+    ]
+  },
+  {
+    "id": "stockholm-petrograd",
+    "from": "Stockholm",
+    "to": "Petrograd",
+    "length": 8,
+    "polyline": [
+      [
+        275,
+        65
+      ],
+      [
+        310,
+        48
+      ],
+      [
+        350,
+        35
+      ],
+      [
+        395,
+        25
+      ]
+    ]
+  },
+  {
+    "id": "oslo-stockholm",
+    "from": "Oslo",
+    "to": "Stockholm",
+    "length": 4,
+    "polyline": [
+      [
+        240,
+        90
+      ],
+      [
+        260,
+        80
+      ],
+      [
+        275,
+        65
+      ]
+    ]
+  },
+  {
+    "id": "hamburg-berlin",
+    "from": "Hamburg",
+    "to": "Berlin",
+    "length": 2,
+    "polyline": [
+      [
+        210,
+        148
+      ],
+      [
+        240,
+        160
+      ]
+    ]
+  },
+  {
+    "id": "berlin-warsaw",
+    "from": "Berlin",
+    "to": "Warsaw",
+    "length": 4,
+    "polyline": [
+      [
+        240,
+        160
+      ],
+      [
+        280,
+        175
+      ]
+    ]
+  },
+  {
+    "id": "berlin-krakow",
+    "from": "Berlin",
+    "to": "Krakow",
+    "length": 4,
+    "polyline": [
+      [
+        240,
+        160
+      ],
+      [
+        260,
+        190
+      ],
+      [
+        280,
+        220
+      ]
+    ]
+  },
+  {
+    "id": "warsaw-krakow",
+    "from": "Warsaw",
+    "to": "Krakow",
+    "length": 3,
+    "polyline": [
+      [
+        280,
+        175
+      ],
+      [
+        280,
+        200
+      ],
+      [
+        280,
+        220
+      ]
+    ]
+  },
+  {
+    "id": "paris-lyon",
+    "from": "Paris",
+    "to": "Lyon",
+    "length": 3,
+    "polyline": [
+      [
+        160,
+        215
+      ],
+      [
+        175,
+        245
+      ],
+      [
+        190,
+        270
+      ]
+    ]
+  },
+  {
+    "id": "paris-zurich",
+    "from": "Paris",
+    "to": "Zurich",
+    "length": 3,
+    "polyline": [
+      [
+        160,
+        215
+      ],
+      [
+        180,
+        245
+      ],
+      [
+        205,
+        260
+      ]
+    ]
+  },
+  {
+    "id": "zurich-venice",
+    "from": "Zurich",
+    "to": "Venice",
+    "length": 2,
+    "polyline": [
+      [
+        205,
+        260
+      ],
+      [
+        225,
+        280
+      ]
+    ]
+  },
+  {
+    "id": "zurich-munich",
+    "from": "Zurich",
+    "to": "Munich",
+    "length": 2,
+    "polyline": [
+      [
+        205,
+        260
+      ],
+      [
+        230,
+        255
+      ]
+    ]
+  },
+  {
+    "id": "munich-berlin",
+    "from": "Munich",
+    "to": "Berlin",
+    "length": 4,
+    "polyline": [
+      [
+        230,
+        255
+      ],
+      [
+        240,
+        210
+      ],
+      [
+        240,
+        180
+      ],
+      [
+        240,
+        160
+      ]
+    ]
+  },
+  {
+    "id": "venice-roma",
+    "from": "Venice",
+    "to": "Roma",
+    "length": 4,
+    "polyline": [
+      [
+        225,
+        280
+      ],
+      [
+        235,
+        315
+      ],
+      [
+        245,
+        340
+      ],
+      [
+        250,
+        360
+      ]
+    ]
+  },
+  {
+    "id": "roma-naples",
+    "from": "Roma",
+    "to": "Naples",
+    "length": 2,
+    "polyline": [
+      [
+        250,
+        360
+      ],
+      [
+        258,
+        395
+      ]
+    ]
+  },
+  {
+    "id": "roma-athens",
+    "from": "Roma",
+    "to": "Athens",
+    "length": 6,
+    "polyline": [
+      [
+        250,
+        360
+      ],
+      [
+        270,
+        375
+      ],
+      [
+        295,
+        390
+      ],
+      [
+        320,
+        405
+      ]
+    ]
+  },
+  {
+    "id": "lisbon-madrid",
+    "from": "Lisbon",
+    "to": "Madrid",
+    "length": 3,
+    "polyline": [
+      [
+        45,
+        280
+      ],
+      [
+        85,
+        280
+      ],
+      [
+        120,
+        280
+      ]
+    ]
+  },
+  {
+    "id": "madrid-barcelona",
+    "from": "Madrid",
+    "to": "Barcelona",
+    "length": 3,
+    "polyline": [
+      [
+        120,
+        280
+      ],
+      [
+        155,
+        270
+      ]
+    ]
+  },
+  {
+    "id": "madrid-paris",
+    "from": "Madrid",
+    "to": "Paris",
+    "length": 6,
+    "polyline": [
+      [
+        120,
+        280
+      ],
+      [
+        135,
+        265
+      ],
+      [
+        150,
+        240
+      ],
+      [
+        160,
+        215
+      ]
+    ]
+  },
+  {
+    "id": "barcelona-marseille",
+    "from": "Barcelona",
+    "to": "Marseille",
+    "length": 3,
+    "polyline": [
+      [
+        155,
+        270
+      ],
+      [
+        175,
+        268
+      ]
+    ]
+  },
+  {
+    "id": "marseille-lyon",
+    "from": "Marseille",
+    "to": "Lyon",
+    "length": 2,
+    "polyline": [
+      [
+        175,
+        268
+      ],
+      [
+        175,
+        250
+      ]
+    ]
+  },
+  {
+    "id": "marseille-roma",
+    "from": "Marseille",
+    "to": "Roma",
+    "length": 5,
+    "polyline": [
+      [
+        175,
+        268
+      ],
+      [
+        195,
+        290
+      ],
+      [
+        220,
+        320
+      ],
+      [
+        250,
+        360
+      ]
+    ]
+  },
+  {
+    "id": "krakow-vienna",
+    "from": "Krakow",
+    "to": "Vienna",
+    "length": 2,
+    "polyline": [
+      [
+        280,
+        220
+      ],
+      [
+        300,
+        235
+      ]
+    ]
+  },
+  {
+    "id": "vienna-budapest",
+    "from": "Vienna",
+    "to": "Budapest",
+    "length": 2,
+    "polyline": [
+      [
+        300,
+        235
+      ],
+      [
+        310,
+        255
+      ]
+    ]
+  },
+  {
+    "id": "budapest-bucharest",
+    "from": "Budapest",
+    "to": "Bucharest",
+    "length": 4,
+    "polyline": [
+      [
+        310,
+        255
+      ],
+      [
+        330,
+        270
+      ],
+      [
+        355,
+        285
+      ]
+    ]
+  },
+  {
+    "id": "budapest-sofia",
+    "from": "Budapest",
+    "to": "Sofia",
+    "length": 4,
+    "polyline": [
+      [
+        310,
+        255
+      ],
+      [
+        330,
+        285
+      ],
+      [
+        350,
+        320
+      ]
+    ]
+  },
+  {
+    "id": "sofia-istanbul",
+    "from": "Sofia",
+    "to": "Istanbul",
+    "length": 3,
+    "polyline": [
+      [
+        350,
+        320
+      ],
+      [
+        360,
+        350
+      ]
+    ]
+  },
+  {
+    "id": "istanbul-athens",
+    "from": "Istanbul",
+    "to": "Athens",
+    "length": 4,
+    "polyline": [
+      [
+        360,
+        350
+      ],
+      [
+        340,
+        375
+      ],
+      [
+        320,
+        405
+      ]
+    ]
+  },
+  {
+    "id": "istanbul-sochi",
+    "from": "Istanbul",
+    "to": "Sochi",
+    "length": 6,
+    "polyline": [
+      [
+        360,
+        350
+      ],
+      [
+        400,
+        340
+      ],
+      [
+        440,
+        330
+      ],
+      [
+        475,
+        328
+      ]
+    ]
+  },
+  {
+    "id": "bucharest-sochi",
+    "from": "Bucharest",
+    "to": "Sochi",
+    "length": 5,
+    "polyline": [
+      [
+        355,
+        285
+      ],
+      [
+        400,
+        300
+      ],
+      [
+        440,
+        315
+      ],
+      [
+        475,
+        328
+      ]
+    ]
+  },
+  {
+    "id": "warsaw-riga",
+    "from": "Warsaw",
+    "to": "Riga",
+    "length": 4,
+    "polyline": [
+      [
+        280,
+        175
+      ],
+      [
+        290,
+        145
+      ],
+      [
+        300,
+        115
+      ]
+    ]
+  },
+  {
+    "id": "riga-petrograd",
+    "from": "Riga",
+    "to": "Petrograd",
+    "length": 4,
+    "polyline": [
+      [
+        300,
+        115
+      ],
+      [
+        350,
+        70
+      ],
+      [
+        395,
+        25
+      ]
+    ]
+  },
+  {
+    "id": "moscow-petrograd",
+    "from": "Moscow",
+    "to": "Petrograd",
+    "length": 5,
+    "polyline": [
+      [
+        420,
+        115
+      ],
+      [
+        415,
+        80
+      ],
+      [
+        395,
+        25
+      ]
+    ]
+  },
+  {
+    "id": "moscow-kyiv",
+    "from": "Moscow",
+    "to": "Kyiv",
+    "length": 3,
+    "polyline": [
+      [
+        420,
+        115
+      ],
+      [
+        410,
+        165
+      ]
+    ]
+  },
+  {
+    "id": "warsaw-wilno",
+    "from": "Warsaw",
+    "to": "Wilno",
+    "length": 2,
+    "polyline": [
+      [
+        280,
+        175
+      ],
+      [
+        300,
+        155
+      ]
+    ]
+  },
+  {
+    "id": "wilno-moscow",
+    "from": "Wilno",
+    "to": "Moscow",
+    "length": 5,
+    "polyline": [
+      [
+        300,
+        155
+      ],
+      [
+        350,
+        135
+      ],
+      [
+        400,
+        120
+      ],
+      [
+        420,
+        115
+      ]
+    ]
+  },
+  {
+    "id": "petrograd-athens",
+    "from": "Petrograd",
+    "to": "Athens",
+    "length": 9,
+    "polyline": [
+      [
+        395,
+        25
+      ],
+      [
+        380,
+        60
+      ],
+      [
+        350,
+        100
+      ],
+      [
+        320,
+        140
+      ],
+      [
+        295,
+        175
+      ],
+      [
+        270,
+        250
+      ],
+      [
+        265,
+        330
+      ],
+      [
+        295,
+        405
+      ],
+      [
+        320,
+        405
+      ]
+    ]
+  },
+  {
+    "id": "lisbon-moscow",
+    "from": "Lisbon",
+    "to": "Moscow",
+    "length": 10,
+    "polyline": [
+      [
+        45,
+        280
+      ],
+      [
+        80,
+        280
+      ],
+      [
+        125,
+        250
+      ],
+      [
+        160,
+        215
+      ],
+      [
+        200,
+        180
+      ],
+      [
+        270,
+        150
+      ],
+      [
+        340,
+        130
+      ],
+      [
+        420,
+        115
+      ]
+    ]
+  },
+  {
+    "id": "lisbon-sochi",
+    "from": "Lisbon",
+    "to": "Sochi",
+    "length": 11,
+    "polyline": [
+      [
+        45,
+        280
+      ],
+      [
+        80,
+        280
+      ],
+      [
+        125,
+        250
+      ],
+      [
+        160,
+        215
+      ],
+      [
+        220,
+        260
+      ],
+      [
+        280,
+        280
+      ],
+      [
+        350,
+        300
+      ],
+      [
+        420,
+        315
+      ],
+      [
+        475,
+        328
+      ]
+    ]
+  }
+]
