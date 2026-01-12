@@ -299,6 +299,86 @@ def process_frame(frame: np.ndarray,
 
 def main():
     print("🚂 GetOffMyTrain - Optimized AR")
+    
+    # === 1. Configurazione Risoluzione Camera ===
+    cam_w, cam_h = 1280, 720
+    cap = cv2.VideoCapture(0)
+    cap.set(cv2.CAP_PROP_FRAME_WIDTH, cam_w)
+    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, cam_h)
+
+    template = ImageProcessor.load_image(Config.TEMPLATE_PATH)
+    routes = RouteManager.load_routes(Config.ROUTES_JSON)
+
+    # === 2. Configurazione Finestra (SOLUZIONE AL TUO PROBLEMA) ===
+    window_name = "GetOffMyTrain - AR Experience"
+    
+    # Crea la finestra in modalità "NORMAL" per permettere il ridimensionamento manuale
+    cv2.namedWindow(window_name, cv2.WINDOW_NORMAL)
+    
+    # Imposta la dimensione iniziale (es. metà della risoluzione della camera)
+    # Puoi cambiare 2 in qualsiasi altro numero per regolare la grandezza iniziale
+    start_w = int(cam_w / 2)
+    start_h = int(cam_h / 2)
+    cv2.resizeWindow(window_name, start_w, start_h)
+
+    # --- Variabili di Stato ---
+    last_valid_H = None          
+    cached_assignments = None    
+    
+    missed_frames = 0
+    MAX_MISSED_FRAMES = 10
+    
+    frame_count = 0
+    TRAIN_CHECK_INTERVAL = 15 
+
+    while True:
+        ret, frame = cap.read()
+        if not ret:
+            break
+        try:
+            should_detect_trains = (frame_count % TRAIN_CHECK_INTERVAL == 0)
+
+            result = process_frame(
+                frame, template, routes, 
+                last_H=last_valid_H, 
+                cached_assignments=cached_assignments,
+                detect_trains=should_detect_trains
+            )
+            
+            overlay, scores, current_H, assignments = result
+            
+            if current_H is not None:
+                cached_assignments = assignments
+                if last_valid_H is None:
+                    last_valid_H = current_H
+                else:
+                    last_valid_H = 0.8 * last_valid_H + 0.2 * current_H
+                missed_frames = 0
+            else:
+                 raise RuntimeError("Tracking lost")
+
+            # Mostra l'immagine nella finestra configurata
+            cv2.imshow(window_name, overlay)
+        
+        except Exception as e:
+            missed_frames += 1
+            if missed_frames > MAX_MISSED_FRAMES:
+                last_valid_H = None 
+                cached_assignments = None 
+            
+            # Anche in caso di errore, usiamo la stessa finestra ridimensionabile
+            cv2.imshow(window_name, frame)
+
+        frame_count += 1
+        if cv2.waitKey(1) & 0xFF == ord("q"):
+            break
+
+    cap.release()
+    cv2.destroyAllWindows()
+    
+'''
+def main():
+    print("🚂 GetOffMyTrain - Optimized AR")
     cap = cv2.VideoCapture(0)
     cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
     cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
@@ -363,6 +443,6 @@ def main():
 
     cap.release()
     cv2.destroyAllWindows()
-
+'''
 if __name__ == "__main__":
     main()
