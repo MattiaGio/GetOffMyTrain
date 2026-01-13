@@ -1,7 +1,7 @@
 {
   "image_source": "USA/pictures/07_A.jpg",
   "template_source": "USA/map.jpg",
-  "timestamp": "C:\\Users\\mesit\\OneDrive\\Desktop\\Studio\\Valerio\\Università\\MAGISTRALE\\SECONDO ANNO\\COMPUTER VISION\\GetOffMyTrain-main",
+  "timestamp": "D:\\UNI\\MAGISTRALE\\PRIMO ANNO\\PRIMO SEMESTRE\\Computer Vision\\Full Project\\GetOffMyTrain",
   "detections": {
     "trains_found": 158,
     "routes_available": 101
@@ -14,14 +14,14 @@
       "routes": [
         {
           "route_id": "neworleans-miami",
-          "distance_px": 5.124102381313661,
+          "distance_px": 5.124149496196196,
           "from": "New Orleans",
           "to": "Miami",
           "length": 6
         },
         {
           "route_id": "losangeles-elpaso",
-          "distance_px": 1.4251306015216723,
+          "distance_px": 1.425124339853665,
           "from": "Los Angeles",
           "to": "El Paso",
           "length": 6
@@ -56,7 +56,7 @@
         },
         {
           "route_id": "sanfrancisco-losangeles-1",
-          "distance_px": 1.5702956597285271,
+          "distance_px": 1.5702775928900519,
           "from": "San Francisco",
           "to": "Los Angeles",
           "length": 3
@@ -70,7 +70,7 @@
         },
         {
           "route_id": "raleigh-charleston",
-          "distance_px": 1.5379977773207825,
+          "distance_px": 1.5379845289817937,
           "from": "Raleigh",
           "to": "Charleston",
           "length": 2
@@ -84,14 +84,14 @@
         },
         {
           "route_id": "oklahomacity-kansascity-2",
-          "distance_px": 2.80802753452084,
+          "distance_px": 2.8080317264326284,
           "from": "Oklahoma City",
           "to": "Kansas City",
           "length": 2
         },
         {
           "route_id": "portland-sanfrancisco-1",
-          "distance_px": 3.1339904534842997,
+          "distance_px": 3.133989554967591,
           "from": "Portland",
           "to": "San Francisco",
           "length": 5
@@ -112,14 +112,14 @@
         },
         {
           "route_id": "saltlakecity-denver-2",
-          "distance_px": 5.9502419759596314,
+          "distance_px": 5.950357607679142,
           "from": "Salt Lake City",
           "to": "Denver",
           "length": 3
         },
         {
           "route_id": "seattle-calgary",
-          "distance_px": 2.112011982239999,
+          "distance_px": 2.1120104697462674,
           "from": "Seattle",
           "to": "Calgary",
           "length": 4
@@ -133,42 +133,42 @@
         },
         {
           "route_id": "winnipeg-duluth",
-          "distance_px": 2.5639688001570655,
+          "distance_px": 2.5641845920214412,
           "from": "Winnipeg",
           "to": "Duluth",
           "length": 4
         },
         {
           "route_id": "saultstmarie-duluth",
-          "distance_px": 3.126101595466418,
+          "distance_px": 3.1260737658306974,
           "from": "Sault St. Marie",
           "to": "Duluth",
           "length": 3
         },
         {
           "route_id": "seattle-portland-2",
-          "distance_px": 1.0137266856796037,
+          "distance_px": 1.0137505694623223,
           "from": "Seattle",
           "to": "Portland",
           "length": 1
         },
         {
           "route_id": "winnipeg-helena",
-          "distance_px": 1.6520051627323478,
+          "distance_px": 1.6520472559435546,
           "from": "Winnipeg",
           "to": "Helena",
           "length": 4
         },
         {
           "route_id": "portland-sanfrancisco-2",
-          "distance_px": 4.161899890471783,
+          "distance_px": 4.161911730641923,
           "from": "Portland",
           "to": "San Francisco",
           "length": 5
         },
         {
           "route_id": "portland-saltlakecity",
-          "distance_px": 0.3032383980357318,
+          "distance_px": 0.3032238721013105,
           "from": "Portland",
           "to": "Salt Lake City",
           "length": 6
@@ -196,28 +196,28 @@
       "routes": [
         {
           "route_id": "omaha-chicago",
-          "distance_px": 5.253485422050103,
+          "distance_px": 5.253462584560212,
           "from": "Omaha",
           "to": "Chicago",
           "length": 4
         },
         {
           "route_id": "phoenix-elpaso",
-          "distance_px": 6.817150964626658,
+          "distance_px": 6.817138388891481,
           "from": "Phoenix",
           "to": "El Paso",
           "length": 3
         },
         {
           "route_id": "pittsburgh-chicago-1",
-          "distance_px": 5.863485211812628,
+          "distance_px": 5.863224864770437,
           "from": "Pittsburgh",
           "to": "Chicago",
           "length": 3
         },
         {
           "route_id": "kansascity-omaha-1",
-          "distance_px": 4.075576483178796,
+          "distance_px": 4.075582493910274,
           "from": "Kansas City",
           "to": "Omaha",
           "length": 1
@@ -231,7 +231,7 @@
         },
         {
           "route_id": "denver-santafe",
-          "distance_px": 5.4610587681230935,
+          "distance_px": 5.461048983829758,
           "from": "Denver",
           "to": "Santa Fe",
           "length": 2
@@ -245,14 +245,14 @@
         },
         {
           "route_id": "duluth-chicago",
-          "distance_px": 6.050319515828547,
+          "distance_px": 6.050458175317921,
           "from": "Duluth",
           "to": "Chicago",
           "length": 3
         },
         {
           "route_id": "denver-oklahomacity",
-          "distance_px": 1.3965639457858001,
+          "distance_px": 1.3966092620773352,
           "from": "Denver",
           "to": "Oklahoma City",
           "length": 4
@@ -273,49 +273,49 @@
       "routes": [
         {
           "route_id": "saultstmarie-winnipeg",
-          "distance_px": 7.534866298058605,
+          "distance_px": 7.534494395215928,
           "from": "Sault St. Marie",
           "to": "Winnipeg",
           "length": 6
         },
         {
           "route_id": "toronto-saultstmarie",
-          "distance_px": 7.276247962529914,
+          "distance_px": 7.2760571909903495,
           "from": "Toronto",
           "to": "Sault St. Marie",
           "length": 2
         },
         {
           "route_id": "vancouver-calgary",
-          "distance_px": 2.301060006425522,
+          "distance_px": 2.301074266267424,
           "from": "Vancouver",
           "to": "Calgary",
           "length": 3
         },
         {
           "route_id": "winnipeg-calgary",
-          "distance_px": 6.099317815391963,
+          "distance_px": 6.099321526353181,
           "from": "Winnipeg",
           "to": "Calgary",
           "length": 6
         },
         {
           "route_id": "toronto-montreal",
-          "distance_px": 2.5736170727173024,
+          "distance_px": 2.5736826691302737,
           "from": "Toronto",
           "to": "Montreal",
           "length": 3
         },
         {
           "route_id": "montreal-boston-1",
-          "distance_px": 5.527057122269427,
+          "distance_px": 5.526953787821713,
           "from": "Montreal",
           "to": "Boston",
           "length": 2
         },
         {
           "route_id": "helena-seattle",
-          "distance_px": 3.4198944237300757,
+          "distance_px": 3.4201257237265,
           "from": "Helena",
           "to": "Seattle",
           "length": 6
@@ -329,21 +329,21 @@
       "routes": [
         {
           "route_id": "littlerock-dallas",
-          "distance_px": 0.24931640624998863,
+          "distance_px": 0.24927978515620453,
           "from": "Little Rock",
           "to": "Dallas",
           "length": 2
         },
         {
           "route_id": "raleigh-washington-2",
-          "distance_px": 4.993305489622441,
+          "distance_px": 4.9934143706009575,
           "from": "Raleigh",
           "to": "Washington",
           "length": 2
         },
         {
           "route_id": "stlouis-littlerock",
-          "distance_px": 6.801769966879067,
+          "distance_px": 6.801731064447475,
           "from": "Saint Louis",
           "to": "Little Rock",
           "length": 2
@@ -357,35 +357,35 @@
         },
         {
           "route_id": "washington-newyork-1",
-          "distance_px": 4.329193115234375,
+          "distance_px": 4.329498291015625,
           "from": "Washington",
           "to": "New York",
           "length": 2
         },
         {
           "route_id": "newyork-pittsburgh-2",
-          "distance_px": 3.424449624954668,
+          "distance_px": 3.422907539209326,
           "from": "New York",
           "to": "Pittsburgh",
           "length": 2
         },
         {
           "route_id": "nashville-raleigh",
-          "distance_px": 0.7344604382882762,
+          "distance_px": 0.734501381915794,
           "from": "Nashville",
           "to": "Raleigh",
           "length": 3
         },
         {
           "route_id": "pittsburgh-toronto",
-          "distance_px": 3.455512173776691,
+          "distance_px": 3.455872498617075,
           "from": "Pittsburgh",
           "to": "Toronto",
           "length": 2
         },
         {
           "route_id": "kansascity-stlouis-2",
-          "distance_px": 4.15625,
+          "distance_px": 4.1561279296875,
           "from": "Kansas City",
           "to": "Saint Louis",
           "length": 2

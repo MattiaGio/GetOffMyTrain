@@ -24,7 +24,7 @@ class Config:
     TRAINS_MODEL = "models/trains.pt"
     ASSIGN_THRESHOLD_PX = 8
 
-    IMAGE_PATH = ACTIVE_MAP+"/pictures/06_D.jpg"
+    #IMAGE_PATH = ACTIVE_MAP+"/pictures/06_D.jpg"
     TEMPLATE_PATH = ACTIVE_MAP+"/map.jpg"
     ROUTES_JSON = ACTIVE_MAP+"/tracks.json"
     OUTPUT_JSON = ACTIVE_MAP+"/game_state_scores.json"
@@ -230,7 +230,7 @@ class Visualizer:
         panel_w, panel_h = 300, 20 + (len(scores) * 30)
         
         # Sfondo semitrasparente
-        cv2.rectangle(overlay, (panel_x, panel_y), (panel_x + panel_w, panel_y + panel_h), (0, 0, 0), -1)
+        cv2.rectangle(overlay, (panel_x, panel_y), (panel_x + panel_w, panel_y + panel_h), (127, 127, 127), -1)
         alpha = 0.6
         cv2.addWeighted(overlay, alpha, img, 1 - alpha, 0, img)
         
@@ -246,7 +246,7 @@ class Visualizer:
             text = f"{data['player_name']}: {data['route_score']} pts"
             cv2.putText(img, text, (panel_x + 10, y_offset), cv2.FONT_HERSHEY_SIMPLEX, 0.6, color, 1, cv2.LINE_AA)
             y_offset += 25
-
+            
 # ==================== Pipeline Functions ====================
 
 def process_frame(frame: np.ndarray, 
@@ -259,6 +259,17 @@ def process_frame(frame: np.ndarray,
     # --- FASE 1: TRACKING ---
     corner_dets = ImageProcessor.detect_with_yolo(Config.CORNERS_MODEL, frame)
     
+    # === DEBUG VISIVO: Disegna TUTTO quello che YOLO vede ===
+    debug_frame = frame.copy()
+    for d in corner_dets:
+        x1, y1, x2, y2 = map(int, d["bbox"])
+        label = f"{d['class']} {d['conf']:.2f}"
+        cv2.rectangle(debug_frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
+        cv2.putText(debug_frame, label, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+    # scommenta questa riga per testare:
+    # return debug_frame, {}, last_H, cached_assignments
+    # ========================================================
+    
     H = None
     try:
         corners = ImageProcessor.extract_corners(corner_dets)
@@ -269,6 +280,8 @@ def process_frame(frame: np.ndarray,
         else:
             # Se fallisce e non abbiamo memoria, restituiamo il frame pulito
             return frame, {}, None, None
+
+
 
     # --- FASE 2: ANALISI (Sull'immagine raddrizzata "virtualmente") ---
     # Creiamo aligned SOLO se dobbiamo rilevare i treni (risparmio CPU)
@@ -294,6 +307,7 @@ def process_frame(frame: np.ndarray,
     overlay = Visualizer.draw_overlay(frame, routes, assignments, H, scores)
     
     return overlay, scores, H, assignments
+
 
 # ==================== Real-Time Demo ====================
 
@@ -376,73 +390,6 @@ def main():
     cap.release()
     cv2.destroyAllWindows()
     
-'''
-def main():
-    print("🚂 GetOffMyTrain - Optimized AR")
-    cap = cv2.VideoCapture(0)
-    cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
-    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
 
-    template = ImageProcessor.load_image(Config.TEMPLATE_PATH)
-    routes = RouteManager.load_routes(Config.ROUTES_JSON)
-
-    # --- Variabili di Stato ---
-    last_valid_H = None          # Memoria per la posizione della mappa
-    cached_assignments = None    # Memoria per la posizione dei treni
-    
-    missed_frames = 0
-    MAX_MISSED_FRAMES = 10
-    
-    # Configurazione Ottimizzazione
-    frame_count = 0
-    TRAIN_CHECK_INTERVAL = 15  # Controlla i treni ogni 15 frame (circa 2 volte al secondo)
-
-    while True:
-        ret, frame = cap.read()
-        if not ret:
-            break
-        try:
-            should_detect_trains = (frame_count % TRAIN_CHECK_INTERVAL == 0)
-
-            result = process_frame(
-                frame, template, routes, 
-                last_H=last_valid_H, 
-                cached_assignments=cached_assignments,
-                detect_trains=should_detect_trains
-            )
-            
-            # Unpack sicuro (se process_frame fallisce all'inizio potrebbe tornare dati parziali, 
-            # ma con la modifica sopra torna frame pulito se H è None)
-            overlay, scores, current_H, assignments = result
-            
-            if current_H is not None:
-                cached_assignments = assignments
-                if last_valid_H is None:
-                    last_valid_H = current_H
-                else:
-                    # Smoothing aumentato per l'AR (meno jitter = più realismo)
-                    last_valid_H = 0.8 * last_valid_H + 0.2 * current_H
-                missed_frames = 0
-            else:
-                 # Se H è None (tracking perso), incrementa errori
-                 raise RuntimeError("Tracking lost")
-
-            cv2.imshow("GetOffMyTrain - AR Experience", overlay)
-        
-        except Exception as e:
-            missed_frames += 1
-            if missed_frames > MAX_MISSED_FRAMES:
-                last_valid_H = None 
-                cached_assignments = None # Se perdiamo la mappa, resettiamo anche i treni
-            
-            cv2.imshow("GetOffMyTrain - Live Overlay", frame)
-
-        frame_count += 1
-        if cv2.waitKey(1) & 0xFF == ord("q"):
-            break
-
-    cap.release()
-    cv2.destroyAllWindows()
-'''
 if __name__ == "__main__":
     main()
