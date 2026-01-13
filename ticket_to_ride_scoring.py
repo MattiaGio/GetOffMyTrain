@@ -27,14 +27,14 @@ from collections import defaultdict
 
 class Config:
     """Map change: ACTIVE_MAP = "USA" or "EUROPE"""
-    ACTIVE_MAP = "EUROPE"
+    ACTIVE_MAP = "USA"
 
     """Project configuration"""
     CORNERS_MODEL = "models/corners.pt"
     TRAINS_MODEL = "models/trains.pt"
     ASSIGN_THRESHOLD_PX = 8
 
-    IMAGE_PATH = ACTIVE_MAP+"/pictures/01_A.jpg"
+    IMAGE_PATH = ACTIVE_MAP+"/pictures/07_A.jpg"
     TEMPLATE_PATH = ACTIVE_MAP+"/map.jpg"
     ROUTES_JSON = ACTIVE_MAP+"/tracks.json"
     OUTPUT_JSON = ACTIVE_MAP+"/game_state_scores.json"

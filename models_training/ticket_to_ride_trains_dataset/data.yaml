@@ -1,5 +1,6 @@
 train: ../train/images
-val: ../train/images
+val: ../valid/images
+test: ../test/images
 
 nc: 5
 names: ['black_train', 'blue_train', 'green_train', 'red_train', 'yellow_train']
@@ -7,6 +8,6 @@ names: ['black_train', 'blue_train', 'green_train', 'red_train', 'yellow_train']
 roboflow:
   workspace: computer-vision-9dya7
   project: ticket_to_ride_trains-zb0hz
-  version: 4
+  version: 6
   license: CC BY 4.0
-  url: https://universe.roboflow.com/computer-vision-9dya7/ticket_to_ride_trains-zb0hz/dataset/4
+  url: https://universe.roboflow.com/computer-vision-9dya7/ticket_to_ride_trains-zb0hz/dataset/6

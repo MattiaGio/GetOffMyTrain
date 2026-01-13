@@ -1,8 +1,8 @@
 
-ticket_to_ride_trains - v4 2025-12-18 12:10pm
+ticket_to_ride_trains - v6 2026-01-13 11:41am
 ==============================
 
-This dataset was exported via roboflow.com on December 18, 2025 at 11:12 AM GMT
+This dataset was exported via roboflow.com on January 13, 2026 at 10:41 AM GMT
 
 Roboflow is an end-to-end computer vision platform that helps you
 * collaborate with your team on computer vision projects
@@ -17,7 +17,7 @@ visit https://github.com/roboflow/notebooks
 
 To find over 100k other datasets and pre-trained models, visit https://universe.roboflow.com
 
-The dataset includes 40 images.
+The dataset includes 60 images.
 Trains are annotated in YOLOv8 format.
 
 The following pre-processing was applied to each image:
